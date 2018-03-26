@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="smkendo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="smkendo.war">
+      <element id="artifact" artifact-name="smkendo:war exploded" />
+    </root>
+  </artifact>
+</component>
