@@ -2,48 +2,35 @@ package com.hqf.sys.model;
 
 import com.hqf.sys.base.BaseEntity;
 
-import java.util.Date;
-
 public class SysMenu extends BaseEntity {
-    private String id;
 
+    // 父级id
     private String parentId;
 
+    // 是否有子级
     private String hasChildren;
 
+    // 名称
     private String name;
 
+    // 排序
     private Long sort;
 
+    // 链接
     private String href;
 
+    // 目标
     private String target;
 
+    // 图标
     private String icon;
 
+    // 是否显示
     private String isShow;
 
+    // 权限
     private String permission;
 
-    private String createBy;
-
-    private Date createDate;
-
-    private String updateBy;
-
-    private Date updateDate;
-
-    private String remarks;
-
-    private String delFlag;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
-    }
 
     public String getParentId() {
         return parentId;
@@ -117,51 +104,4 @@ public class SysMenu extends BaseEntity {
         this.permission = permission == null ? null : permission.trim();
     }
 
-    public String getCreateBy() {
-        return createBy;
-    }
-
-    public void setCreateBy(String createBy) {
-        this.createBy = createBy == null ? null : createBy.trim();
-    }
-
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
-    public String getUpdateBy() {
-        return updateBy;
-    }
-
-    public void setUpdateBy(String updateBy) {
-        this.updateBy = updateBy == null ? null : updateBy.trim();
-    }
-
-    public Date getUpdateDate() {
-        return updateDate;
-    }
-
-    public void setUpdateDate(Date updateDate) {
-        this.updateDate = updateDate;
-    }
-
-    public String getRemarks() {
-        return remarks;
-    }
-
-    public void setRemarks(String remarks) {
-        this.remarks = remarks == null ? null : remarks.trim();
-    }
-
-    public String getDelFlag() {
-        return delFlag;
-    }
-
-    public void setDelFlag(String delFlag) {
-        this.delFlag = delFlag == null ? null : delFlag.trim();
-    }
 }
