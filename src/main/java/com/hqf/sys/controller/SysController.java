@@ -35,7 +35,12 @@ public class SysController {
 
     @RequestMapping("menupage")
     @ResponseBody
-    public PageInfo<SysMenu> menuPage (SysMenu sysMenu,int page, int pageSize) {
+    public PageInfo<SysMenu> menuPage (SysMenu sysMenu) {
+        if ("".equals(sysMenu.getId()) || null == sysMenu.getId()) {
+            sysMenu.setParentId("0");
+        } else {
+            sysMenu.setParentId(sysMenu.getId());
+        }
         return sysMenuService.findPage(sysMenu);
     }
 }

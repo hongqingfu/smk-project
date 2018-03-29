@@ -28,6 +28,7 @@
     <script type="text/javascript" src="${ctxStatic}/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="${ctxStatic}/kendo/kendo.all.min.js"></script>
     <script type="text/javascript" src="${ctxStatic}/kendo/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="${ctxStatic}/me/MEWidget.js"></script>
 
     <sitemesh:head/>
 </head>
