@@ -127,8 +127,9 @@
             dataSource: homogeneous,
             template: function (dataItem) {
                 if (!dataItem.item.hasChildren) {
-                    var href = "<a href='"+ dataItem.item.href +"'>" + dataItem.item.name + "</a>";
-                    return href;
+                    var href = window.location.origin + "/" + dataItem.item.href;
+                    var a = "<a href='" + href +"'>" + dataItem.item.name + "</a>";
+                    return a;
                 } else {
                     return dataItem.item.name
                 }
