@@ -4,6 +4,47 @@
     <title>菜单设置</title>
 </head>
 <body>
+<div id="conditions" class="widget-box">
+    <div class="widget-header widget-header-small">
+        <h5 class="lighter">查询条件</h5>
+    </div>
+    <div class="widget-body">
+        <div class="widget-main">
+            <div class="row">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">条件1</label>
+                        <div class="col-md-4">
+                            <input name="" class="input-sm form-control"/>
+                        </div>
+                        <label class="col-md-2 control-label">条件2</label>
+                        <div class="col-md-4">
+                            <input name="" class="input-sm form-control"/>
+                        </div>
+                        <label class="col-md-2 control-label">条件3</label>
+                        <div class="col-md-4">
+                            <input name="" class="input-sm form-control"/>
+                        </div>
+                        <label class="col-md-2 control-label">条件4</label>
+                        <div class="col-md-4">
+                            <input name="" class="input-sm form-control"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="text-align: center">
+                <button class="btn btn-primary">
+                    <span class="glyphicon glyphicon-search"></span>查询
+                </button>
+                <button class="btn btn-primary">
+                    <span class="glyphicon glyphicon-repeat"></span>重置
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 <div id="grid"></div>
 
 <script>
@@ -17,11 +58,9 @@
                     }
                 }
             },
-            height: 600,
             sortable: true,
-//            groupable: true,
             detailInit: detailInit,
-//            selectColumn: true,
+            height: document.documentElement.clientHeight - (70 + $("#conditions").height()),
 //            dataBound: function() {
 //                this.expandRow(this.tbody.find("tr.k-master-row").first());
 //            },
@@ -32,25 +71,34 @@
                     title: "名称"
                 },
                 {
+                    field: "sort",
+                    title: "排序"
+                },
+                {
                     field: "isShow",
                     title: "是否显示"
                 },
                 {
                     field: "href",
                     title: "路径"
+                }, {
+                    field: "permission",
+                    title: "权限"
                 },
-                { command: [{
-                    name: "edit", text: {edit: "修改", update: "更新", cancel: "取消"}, click: function (e) {
+                {
+                    command: [{
+                        name: "edit", text: {edit: "修改", update: "更新", cancel: "取消"}, click: function (e) {
 //                        $("input[name='cnName']").attr("readonly", "readonly");
 //                        $("td input[name='operOrg']").attr("readonly", "readonly");
-                    }
-                }, {
-                    name: "destroy",
-                    iconClass: "k-icon k-i-delete",
-                    text: "删除"
-                }],
+                        }
+                    }, {
+                        name: "destroy",
+                        iconClass: "k-icon k-i-delete",
+                        text: "删除"
+                    }],
                     title: "操作",
-                    width: "220px"}
+                    width: "220px"
+                }
             ],
             editable: "inline"
         });

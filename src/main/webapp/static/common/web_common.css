@@ -1,0 +1,91 @@
+/*grid表头上方工具栏*/
+.me-toolbar {
+    background-color: #f5f5f5;
+    border-style: solid solid none solid;
+    border-color: #c5c5c5;
+    border-width: 1px;
+    margin-top: 5px;
+    width: 99.88%;
+}
+
+.me-toolbar-row {
+    padding: 5px;
+    margin: 0;
+}
+
+.form-group > span {
+    padding-top: 5px;
+}
+
+/*面板样式*/
+.panel {
+    margin-bottom: 17px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.panel-primary {
+    border-color: #89C7FB !important;
+}
+
+.panel-heading {
+    color: rgb(33, 34, 37) !important;
+    padding: 1px 10px !important;
+    background-color: #89C7FB !important;
+    border-color: #89C7FB !important;
+}
+
+.panel-body {
+    padding: 3px;
+}
+
+/*搜索表单样式*/
+.widget-box {
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 3px 0;
+    border-bottom: 1px solid #CCC;
+}
+
+.widget-header-small {
+    min-height: 31px;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+
+.widget-header {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    position: relative;
+    min-height: 38px;
+    background: #f7f7f7;
+    /*background-image: -webkit-gradient(linear,left 0,left 100%,from(#fff),to(#eee));*/
+    /*background-image: -webkit-linear-gradient(top,#fff,0%,#eee,100%);*/
+    /*background-image: -moz-linear-gradient(top,#fff 0,#eee 100%);*/
+    /*background-image: linear-gradient(to bottom,#fff 0,#eee 100%);*/
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffeeeeee',GradientType=0);
+    /*color: #669fc7;*/
+    border: 1px solid #CCC;
+    border-bottom: 1px solid #DDD;
+    padding-left: 12px;
+    border-radius: 3px 3px 0 0;
+}
+
+.widget-body {
+    border: 1px solid #CCC;
+    border-top: 0;
+    background-color: #FFF;
+}
+.widget-main {
+    padding: 12px;
+}
