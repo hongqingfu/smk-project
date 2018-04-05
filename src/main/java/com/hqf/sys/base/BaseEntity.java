@@ -1,5 +1,8 @@
 package com.hqf.sys.base;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
@@ -15,12 +18,16 @@ public class BaseEntity implements Serializable {
     private String createBy;
 
     //创建时间
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createDate;
 
     //更新人
     private String updateBy;
 
     //更新时间
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date updateDate;
 
     //备注

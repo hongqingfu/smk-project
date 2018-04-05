@@ -90,12 +90,19 @@
                 var renderRowCount = function () {
 
                     that.options._count += 1;
-                    return kendo.render(kendo.template(rowTemplate), [{ count: that.options._count }]);
+                    return kendo.render(kendo.template(rowTemplate), [{count: that.options._count}]);
                 };
                 if (options.rowNumber) {
                     if (options.columns) {
                         //1. 添加行号列
-                        options.columns.splice(0, 0, { attributes: { 'class': 'tight-cell' }, editor: null, editable: false, title: '', template: renderRowCount, width: "38px" });
+                        options.columns.splice(0, 0, {
+                            attributes: {'class': 'tight-cell'},
+                            editor: null,
+                            editable: false,
+                            title: '',
+                            template: renderRowCount,
+                            width: "38px"
+                        });
                     }
                 }
             }
@@ -109,7 +116,7 @@
                 options.columns.splice(0, 0, {
                     headerTemplate: "<input type='checkbox' id='header-chb' class='k-checkbox header-checkbox'><label class='k-checkbox-label' for='header-chb'></label>",
                     template: "<input type='checkbox' id='#= id#' class='k-checkbox row-checkbox'><label class='k-checkbox-label' for='#= id#'></label>",
-                    width: 33,  sortable: true
+                    width: 33, sortable: true
                 });
             }
         },
@@ -182,7 +189,9 @@
                 $selectedRow.find('input.k-grid-checkbox').each(function () {
                     this.checked = true;
                 });
-                that.tbody.find('tr').not($selectedRow).find('.k-grid-checkbox:checkbox:checked').each(function () { this.checked = false; });
+                that.tbody.find('tr').not($selectedRow).find('.k-grid-checkbox:checkbox:checked').each(function () {
+                    this.checked = false;
+                });
             });
 
         },
@@ -205,7 +214,9 @@
             if (this.selectable) {
                 kendo.ui.Grid.fn.clearSelection.call(this);
                 if (this.options.selectColumn) {
-                    this.tbody.find('input.k-grid-checkbox:checked').each(function () { this.checked = false; });
+                    this.tbody.find('input.k-grid-checkbox:checked').each(function () {
+                        this.checked = false;
+                    });
                 }
             }
 
@@ -217,6 +228,135 @@
             selectColumn: false
         }
     });
+
+    var MEMenu = kendo.ui.Widget.extend({
+        init: function (element, options) {
+            var that = this;
+
+            kendo.ui.Widget.fn.init.call(this, element, options);
+            this.setMenu(element);
+            // $.get(ctx + "/sys/menus2", {}, function (response) {
+            //     var menuList = response;
+            //     // that.replaceChildren(menuList, "children");
+            //     for (var i = 0; i < menuList.length; i++) {
+            //         menuList[i].none = [{text: ""}]
+            //     }
+            //     var datasource = new kendo.data.HierarchicalDataSource({
+            //         data: menuList,
+            //         schema: {
+            //             model: {
+            //                 children: "none"
+            //             }
+            //         }
+            //     });
+            //     var $menu = $(element);
+            //     $menu.kendoPanelBar({
+            //         dataSource: datasource,
+            //         loadOnDemand: false,
+            //         expandMode: "single",
+            //         dataTextField: "name"
+            //
+            //     });
+            //     that.panelBar = $menu.data("kendoPanelBar");
+            //     //子菜单
+            //     for (var i = 0; i < menuList.length; i++) {
+            //         var menuitem = menuList[i];
+            //         if (menuitem.items) {
+            //             var uid = that.panelBar.dataSource.get(menuitem.id).uid;
+            //             var $li = $menu.find('[data-uid=' + uid + ']').find('li');
+            //             var inline = new kendo.data.HierarchicalDataSource({
+            //                 data: menuitem.items,
+            //                 schema: {
+            //                     model: {
+            //                         hasChildren: function (dataItem) {
+            //                             if (dataItem.hasChildren == 0) {
+            //                                 return true;
+            //                             } else {
+            //                                 return false;
+            //                             }
+            //                         }
+            //                     }
+            //                 }
+            //         });
+            //             var $menutrees = $('<div></div>').appendTo($li).kendoTreeView({
+            //                 dataSource: inline,
+            //                 // template: "<span class='#= item.iconCls != ''?item.iconCls:item.leaf?'glyphicon glyphicon-file':'glyphicon glyphicon-folder-open' #'></span>#= item.text #",
+            //                 loadOnDemand:false,
+            //                 select: function (e) {
+            //                     e.preventDefault();
+            //                     console.log("Selecting", e.node);
+            //                     if(e.sender.dataItem(e.node).hasChildren){
+            //                         e.sender.toggle($(e.node));
+            //                     }
+            //                     // return false;
+            //                 },
+            //             });
+            //             var treeView = $menutrees.data('kendoTreeView');
+            //             that.trees.push({tree:treeView,panelId:uid});
+            //             //注册单击打开菜单事件
+            //             $menutrees.on('click', 'span.k-state-selected',
+            //                 function (e) {
+            //                     $(e.delegateTarget).children().children().data('kendoTreeView').expand($(this));
+            //                 });
+            //             // var $menuLinks = $menu.find('a');
+            //             // $menuLinks.on('click', function (e: JQueryEventObject) {
+            //             //     e.preventDefault();
+            //             //     $("#main-splider").getKendoSplitter().ajaxRequest("#content-panel", e.target.getAttribute("href"));
+            //             // });
+            //         }
+            //     }
+            //     that.panelBar.collapse($('ul'),false);
+            //     that.bind("dataBound",that.skipToMenu);
+            //     that.trigger("dataBound");
+            //
+            //     // that.skipToMenu();
+            // })
+        },
+        options: {
+            name: "MEMenu"
+        },
+        setMenu: function (element) {
+            var homogeneous = new kendo.data.HierarchicalDataSource({
+                transport: {
+                    read: {
+                        url: ctx + "/sys/menus",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    model: {
+                        id: "id",
+                        hasChildren: function (dataItem) {
+                            if (dataItem.hasChildren == 0) {
+                                return true;
+                            } else {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            });
+            var m = $(element).kendoPanelBar({
+                dataSource: homogeneous,
+                loadOnDemand: false,
+                expandMode: "single",
+                dataTextField: "name",
+                template: function (dataItem) {
+                    if (!dataItem.item.hasChildren) {
+                        var href = window.location.origin + "/" + dataItem.item.href;
+                        var a = "<a href='" + href + "'>" + dataItem.item.name + "</a>";
+                        return a;
+                    } else {
+                        return dataItem.item.name
+                    }
+                }
+            });
+
+            m.data("kendoPanelBar").select(function () {
+            })
+        }
+    });
     kendo.ui.plugin(MEGrid);
+    kendo.ui.plugin(MEMenu);
 
 })(jQuery);

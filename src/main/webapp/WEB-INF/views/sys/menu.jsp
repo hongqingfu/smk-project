@@ -49,12 +49,42 @@
 
 <script>
     $(document).ready(function () {
+
         var element = $("#grid").kendoMEGrid({
             dataSource: {
                 transport: {
                     read: {
                         url: ctx + "/sys/menupage",
                         type: "post"
+                    },
+                    update: {
+                        url: ctx + "/sys/saveMenu",
+                        type: "post",
+//                        contentType: "application/json",
+                        dataType: "json"
+                    },
+                    destroy: {
+                        url: ctx + "/sys/deleteMenu",
+//                        type: "post",
+                        dataType: "json"
+                    },
+                    create: {
+                        url: ctx + "/sys/saveMenu",
+                        type: "post",
+//                        contentType: "application/json",
+                        dataType: "json"
+                    }
+                },
+                schema: {
+                    model: {
+                        id: "id",
+                        fields: {
+                            name: {type: "string", nullable: true},
+                            sort: {type: "number"},
+                            href: {type: "string"},
+                            isShow: {type: "string"},
+                            permission: {type: "string"}
+                        }
                     }
                 }
             },
@@ -87,10 +117,7 @@
                 },
                 {
                     command: [{
-                        name: "edit", text: {edit: "修改", update: "更新", cancel: "取消"}, click: function (e) {
-//                        $("input[name='cnName']").attr("readonly", "readonly");
-//                        $("td input[name='operOrg']").attr("readonly", "readonly");
-                        }
+                        name: "edit", text: {edit: "修改", update: "更新", cancel: "取消"}
                     }, {
                         name: "destroy",
                         iconClass: "k-icon k-i-delete",
@@ -104,36 +131,43 @@
         });
     });
 
-    function detailInit(e) {
-        $("<div/>").appendTo(e.detailCell).kendoMEGrid({
-            dataSource: {
-                transport: {
-                    read: {
-                        url: ctx + "/sys/menupage",
-                        type: "post",
-                        data: {id: e.data.id}
+        function detailInit(e) {
+            $("<div/>").appendTo(e.detailCell).kendoMEGrid({
+                dataSource: {
+                    transport: {
+                        read: {
+                            url: ctx + "/sys/menupage",
+                            type: "post",
+                            data: {id: e.data.id}
+                        }
                     }
-                }
-//                filter: {field: "id", operator: "eq", value: e.data.id}
-            },
-            sortable: true,
-//            selectColumn: true,
-            rowNumber: true,
-            columns: [
-                {
-                    field: "name",
-                    title: "名称"
+    //                filter: {field: "id", operator: "eq", value: e.data.id}
                 },
-                {
-                    field: "isShow",
-                    title: "是否显示"
-                },
-                {
-                    field: "href",
-                    title: "路径"
-                }
-            ]
-        });
+                sortable: true,
+    //            selectColumn: true,
+                rowNumber: true,
+                columns: [
+                    {
+                        field: "name",
+                        title: "名称"
+                    },
+                    {
+                        field: "isShow",
+                        title: "是否显示"
+                    },
+                    {
+                        field: "href",
+                        title: "路径"
+                    }
+                ]
+            });
+        }
+
+    //格式化时间
+    if (Date) {
+        Date.prototype.toISOString = function () {
+            return kendo.toString(this, "yyyy-MM-dd HH:mm:ss");
+        };
     }
 </script>
 
