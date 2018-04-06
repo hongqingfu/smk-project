@@ -1,8 +1,10 @@
 package com.hqf.sys.controller;
 
+import com.alibaba.druid.util.StringUtils;
 import com.github.pagehelper.PageInfo;
 import com.hqf.sys.base.BaseMessage;
 import com.hqf.sys.model.SysMenu;
+import com.hqf.sys.persistence.Page;
 import com.hqf.sys.service.SysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +23,7 @@ public class SysController {
 
     @RequestMapping("menulist")
     public String menuList() {
-        return "/sys/menu";
+        return "sys/menuList";
     }
 
     @RequestMapping("userList")
@@ -29,7 +31,7 @@ public class SysController {
         return "/sys/sysUserList";
     }
 
-    @RequestMapping("menus")
+    @RequestMapping(value = "menus", method = RequestMethod.POST)
     @ResponseBody
     public List<SysMenu> menuList(SysMenu sysMenu) {
         if ("".equals(sysMenu.getId()) || null == sysMenu.getId()) {
@@ -60,6 +62,9 @@ public class SysController {
     @RequestMapping(value = "saveMenu", method = RequestMethod.POST)
     @ResponseBody
     public BaseMessage saveMenu(SysMenu sysMenu) {
+        if (StringUtils.isEmpty(sysMenu.getParentId())) {
+            sysMenu.setParentId("0"); // 表示最大的父节点
+        }
         int i = sysMenuService.save(sysMenu);
         if (i > 0) {
             return new BaseMessage(200, "保存成功");
@@ -75,6 +80,15 @@ public class SysController {
             return new BaseMessage(200, "删除成功");
         }
         return new BaseMessage(500, "删除失败");
+    }
+
+    @RequestMapping(value = "test", method = RequestMethod.GET)
+    @ResponseBody
+    public Page<SysMenu> test(SysMenu sysMenu) {
+        List<SysMenu> list = sysMenuService.findList(sysMenu);
+        Page<SysMenu> page = new Page<>();
+        page.setResult(list);
+        return page;
     }
 
 }

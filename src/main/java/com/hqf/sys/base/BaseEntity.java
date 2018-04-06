@@ -34,7 +34,7 @@ public class BaseEntity implements Serializable {
     private String remarks;
 
     //删除标志
-    private String delFlag;
+    private String delFlag = "0";
 
     //
     private int take;

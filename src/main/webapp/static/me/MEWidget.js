@@ -208,7 +208,6 @@
         /**
          重载了kendoGrid默认的clearSelection方法
          为了实现清除checkbox选择列的状态
-         @method clearSelection
          */
         clearSelection: function () {
             if (this.selectable) {
@@ -235,82 +234,6 @@
 
             kendo.ui.Widget.fn.init.call(this, element, options);
             this.setMenu(element);
-            // $.get(ctx + "/sys/menus2", {}, function (response) {
-            //     var menuList = response;
-            //     // that.replaceChildren(menuList, "children");
-            //     for (var i = 0; i < menuList.length; i++) {
-            //         menuList[i].none = [{text: ""}]
-            //     }
-            //     var datasource = new kendo.data.HierarchicalDataSource({
-            //         data: menuList,
-            //         schema: {
-            //             model: {
-            //                 children: "none"
-            //             }
-            //         }
-            //     });
-            //     var $menu = $(element);
-            //     $menu.kendoPanelBar({
-            //         dataSource: datasource,
-            //         loadOnDemand: false,
-            //         expandMode: "single",
-            //         dataTextField: "name"
-            //
-            //     });
-            //     that.panelBar = $menu.data("kendoPanelBar");
-            //     //子菜单
-            //     for (var i = 0; i < menuList.length; i++) {
-            //         var menuitem = menuList[i];
-            //         if (menuitem.items) {
-            //             var uid = that.panelBar.dataSource.get(menuitem.id).uid;
-            //             var $li = $menu.find('[data-uid=' + uid + ']').find('li');
-            //             var inline = new kendo.data.HierarchicalDataSource({
-            //                 data: menuitem.items,
-            //                 schema: {
-            //                     model: {
-            //                         hasChildren: function (dataItem) {
-            //                             if (dataItem.hasChildren == 0) {
-            //                                 return true;
-            //                             } else {
-            //                                 return false;
-            //                             }
-            //                         }
-            //                     }
-            //                 }
-            //         });
-            //             var $menutrees = $('<div></div>').appendTo($li).kendoTreeView({
-            //                 dataSource: inline,
-            //                 // template: "<span class='#= item.iconCls != ''?item.iconCls:item.leaf?'glyphicon glyphicon-file':'glyphicon glyphicon-folder-open' #'></span>#= item.text #",
-            //                 loadOnDemand:false,
-            //                 select: function (e) {
-            //                     e.preventDefault();
-            //                     console.log("Selecting", e.node);
-            //                     if(e.sender.dataItem(e.node).hasChildren){
-            //                         e.sender.toggle($(e.node));
-            //                     }
-            //                     // return false;
-            //                 },
-            //             });
-            //             var treeView = $menutrees.data('kendoTreeView');
-            //             that.trees.push({tree:treeView,panelId:uid});
-            //             //注册单击打开菜单事件
-            //             $menutrees.on('click', 'span.k-state-selected',
-            //                 function (e) {
-            //                     $(e.delegateTarget).children().children().data('kendoTreeView').expand($(this));
-            //                 });
-            //             // var $menuLinks = $menu.find('a');
-            //             // $menuLinks.on('click', function (e: JQueryEventObject) {
-            //             //     e.preventDefault();
-            //             //     $("#main-splider").getKendoSplitter().ajaxRequest("#content-panel", e.target.getAttribute("href"));
-            //             // });
-            //         }
-            //     }
-            //     that.panelBar.collapse($('ul'),false);
-            //     that.bind("dataBound",that.skipToMenu);
-            //     that.trigger("dataBound");
-            //
-            //     // that.skipToMenu();
-            // })
         },
         options: {
             name: "MEMenu"
@@ -320,7 +243,8 @@
                 transport: {
                     read: {
                         url: ctx + "/sys/menus",
-                        dataType: "json"
+                        dataType: "json",
+                        type: "post"
                     }
                 },
                 schema: {
@@ -356,7 +280,57 @@
             })
         }
     });
+
+    var MEForm = kendo.ui.Widget.extend({
+        init: function (element, options) {
+            var $element = $(element);
+            var that = this;
+            this.data = kendo.observable(options);
+            kendo.bind(element, this.data);
+            if (options.enableValidate) {
+                //see ref   http://docs.telerik.com/kendo-ui/controls/editors/validator/overview
+                this.validator = $(element).kendoValidator({
+                    messages: {
+                        custom: "Please enter valid value for my custom rule",
+                        required: "字段值不能为空",
+                        email: function (input) {
+                            return (input);
+                        }
+                    }
+                }).data("kendoValidator");
+            }
+            kendo.ui.Widget.fn.init.call(that, $element, options);
+        },
+        options: {
+            name: 'MEForm',
+            enableValidate: false
+        },
+        clear: function () {
+            var that = this;
+            for (var attr in that.data) {
+                if (attr.indexOf("_") != 0 && typeof((that.data)[attr]) != "function" && attr != "uid" && attr != "enableValidate")
+                    this.data.set(attr, null);
+            }
+            that.trigger('clear');
+        },
+        getData: function () {
+            return this.data.toJSON();
+        },
+        setData: function (data) {
+            for (items in data){
+                console.log("属性:"+items+"的值是 ("+ data[items] +")");
+                this.data.set(items, data[items]);
+            }
+        },
+        validate: function () {
+            if (this.validator) {
+                return this.validator.validate();
+            }
+        }
+    });
+
     kendo.ui.plugin(MEGrid);
     kendo.ui.plugin(MEMenu);
+    kendo.ui.plugin(MEForm);
 
 })(jQuery);

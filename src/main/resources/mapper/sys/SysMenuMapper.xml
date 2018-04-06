@@ -228,5 +228,8 @@
         <if test="parentId != null and parentId != ''">
             and parent_id = #{parentId}
         </if>
+        <if test="name != null and name != ''">
+            and name like CONCAT('%', #{name}, '%')
+        </if>
     </select>
 </mapper>
