@@ -30,16 +30,16 @@
 </head>
 <body>
 <div id="header" class="navbar navbar-default" role="navigation" style="margin-bottom: 1px;">
-    <div class="container-fluid">
+    <div class="container-fluid" style="background-color: #337ab7">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">SMK</a>
+            <a class="navbar-brand" href="#" style="color:#fff;">SMK</a>
         </div>
 
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
                 <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                     <%--<img class="nav-user-photo" src="assets/avatars/user.jpg"/>--%>
-                    <span class="user-info">
+                    <span class="user-info" style="color:#fff;">
 									<small>Welcome,</small>
 									Jason
 								</span>

@@ -4,8 +4,10 @@ import com.alibaba.druid.util.StringUtils;
 import com.github.pagehelper.PageInfo;
 import com.hqf.sys.base.BaseMessage;
 import com.hqf.sys.model.SysMenu;
+import com.hqf.sys.model.SysUser;
 import com.hqf.sys.persistence.Page;
 import com.hqf.sys.service.SysMenuService;
+import com.hqf.sys.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +23,9 @@ public class SysController {
     @Autowired
     private SysMenuService sysMenuService;
 
+    @Autowired
+    private SysUserService sysUserService;
+
     @RequestMapping("menulist")
     public String menuList() {
         return "sys/menuList";
@@ -29,6 +34,11 @@ public class SysController {
     @RequestMapping("userList")
     public String userList() {
         return "/sys/sysUserList";
+    }
+
+    @RequestMapping("userForm")
+    public String userForm() {
+        return "/sys/sysUserFrom";
     }
 
     @RequestMapping(value = "menus", method = RequestMethod.POST)
@@ -89,6 +99,12 @@ public class SysController {
         Page<SysMenu> page = new Page<>();
         page.setResult(list);
         return page;
+    }
+
+    @RequestMapping(value = "userPage", method = RequestMethod.POST)
+    @ResponseBody
+    public PageInfo<SysUser> findUserByPage(SysUser sysUser) {
+        return sysUserService.findPage(sysUser);
     }
 
 }

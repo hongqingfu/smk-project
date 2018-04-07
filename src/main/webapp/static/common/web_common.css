@@ -51,7 +51,7 @@
     padding: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    margin: 3px 0;
+    margin: 0 0 3px 0;
     border-bottom: 1px solid #CCC;
 }
 
@@ -88,4 +88,11 @@
 }
 .widget-main {
     padding: 12px;
+}
+
+.space-4 {
+    max-height: 1px;
+    min-height: 1px;
+    overflow: hidden;
+    margin: 4px 0 3px;
 }

@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>菜单设置</title>
+    <meta name="decorator" content="default"/>
     <script type="text/javascript" src="${ctxStatic}/js/menuList.js"></script>
 </head>
 <body>

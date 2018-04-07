@@ -10,4 +10,8 @@
         <pattern>/*</pattern>
     </decorator>
 
+    <decorator name="blank" page="layouts/blank.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+
 </decorators>

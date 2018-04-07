@@ -3,6 +3,8 @@
 <html>
 <head>
     <title>用户设置</title>
+    <meta name="decorator" content="default"/>
+    <script type="text/javascript" src="${ctxStatic}/js/sysUserList.js"></script>
 </head>
 <body>
 <div id="conditions" class="widget-box">

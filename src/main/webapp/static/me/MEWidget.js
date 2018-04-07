@@ -251,7 +251,7 @@
                     model: {
                         id: "id",
                         hasChildren: function (dataItem) {
-                            if (dataItem.hasChildren == 0) {
+                            if (dataItem.hasChildren == 1) {
                                 return true;
                             } else {
                                 return false;
@@ -266,7 +266,7 @@
                 expandMode: "single",
                 dataTextField: "name",
                 template: function (dataItem) {
-                    if (!dataItem.item.hasChildren) {
+                    if (!dataItem.item.hasChildren && dataItem.item.parentId != 0) {
                         var href = window.location.origin + "/" + dataItem.item.href;
                         var a = "<a href='" + href + "'>" + dataItem.item.name + "</a>";
                         return a;
@@ -329,8 +329,54 @@
         }
     });
 
+    var MEWindow = kendo.ui.Window.extend({
+        options: {
+            name: 'MEWindow',
+            title: "详情",
+            visible: false,
+            modal: true,
+            actions: [
+                "Minimize",
+                "Maximize",
+                "Close"
+            ],
+            width: document.documentElement.clientWidth - 100,
+            height: document.documentElement.clientHeight - 100,
+            resizable: true,
+            open: function () {
+                this.center();
+            },
+            close: function () {
+                this.refresh({
+                    url: "about:blank",
+                    iframe: true
+                });
+                //that.queryCondition.query();
+            }
+        },
+        init: function (element, options) {
+            var that = this;
+            var $element;
+            var newOptions;
+
+            //构建kendoWindow
+            newOptions = that.options;
+            kendo.ui.Window.fn.init.call(that, element, newOptions);
+
+            // that.bind('close', function () {
+            //     that.destroy();
+            // });
+            // return that;
+        },
+        openUrl: function (url) {
+            this.refresh({url: url, iframe: true});
+            this.open().center();
+        }
+    });
+
     kendo.ui.plugin(MEGrid);
     kendo.ui.plugin(MEMenu);
     kendo.ui.plugin(MEForm);
+    kendo.ui.plugin(MEWindow);
 
 })(jQuery);
