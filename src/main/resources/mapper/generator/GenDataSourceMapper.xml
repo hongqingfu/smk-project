@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.hqf.generator.mapper.GenDataSourceMapper" >
-  <resultMap id="BaseResultMap" type="com.hqf.generator.model.GenDataSource" >
+  <resultMap id="BaseResultMap" type="com.hqf.test.model.GenDataSource" >
     <id column="id" property="id" jdbcType="VARCHAR" />
     <result column="description" property="description" jdbcType="VARCHAR" />
     <result column="database_type" property="databaseType" jdbcType="VARCHAR" />
@@ -14,10 +14,12 @@
     <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
     <result column="update_by" property="updateBy" jdbcType="VARCHAR" />
     <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    <result column="del_flag" property="delFlag" jdbcType="CHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, description, database_type, database_name, server, port, username, password, 
-    create_by, create_date, update_by, update_date
+    id, description, database_type, database_name, server, port, username, password,
+    create_by, create_date, update_by, update_date, remarks, del_flag
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 'true' as QUERYID,
@@ -29,19 +31,19 @@
     delete from gen_data_source
     where id = #{id,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.hqf.generator.model.GenDataSource" >
-    insert into gen_data_source (id, description, database_type, 
-      database_name, server, port, 
-      username, password, create_by, 
-      create_date, update_by, update_date
-      )
-    values (#{id,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{databaseType,jdbcType=VARCHAR}, 
-      #{databaseName,jdbcType=VARCHAR}, #{server,jdbcType=VARCHAR}, #{port,jdbcType=VARCHAR}, 
-      #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{createBy,jdbcType=VARCHAR}, 
-      #{createDate,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIMESTAMP}
-      )
+  <insert id="insert" parameterType="com.hqf.test.model.GenDataSource" >
+    insert into gen_data_source (id, description, database_type,
+    database_name, server, port,
+    username, password, create_by,
+    create_date, update_by, update_date,
+    remarks, del_flag)
+    values (#{id,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{databaseType,jdbcType=VARCHAR},
+    #{databaseName,jdbcType=VARCHAR}, #{server,jdbcType=VARCHAR}, #{port,jdbcType=VARCHAR},
+    #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{createBy,jdbcType=VARCHAR},
+    #{createDate,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIMESTAMP},
+    #{remarks,jdbcType=VARCHAR}, #{delFlag,jdbcType=CHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.hqf.generator.model.GenDataSource" >
+  <insert id="insertSelective" parameterType="com.hqf.test.model.GenDataSource" >
     insert into gen_data_source
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -79,6 +81,12 @@
       </if>
       <if test="updateDate != null" >
         update_date,
+      </if>
+      <if test="remarks != null" >
+        remarks,
+      </if>
+      <if test="delFlag != null" >
+        del_flag,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -118,9 +126,15 @@
       <if test="updateDate != null" >
         #{updateDate,jdbcType=TIMESTAMP},
       </if>
+      <if test="remarks != null" >
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="delFlag != null" >
+        #{delFlag,jdbcType=CHAR},
+      </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.hqf.generator.model.GenDataSource" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.hqf.test.model.GenDataSource" >
     update gen_data_source
     <set >
       <if test="description != null" >
@@ -156,10 +170,16 @@
       <if test="updateDate != null" >
         update_date = #{updateDate,jdbcType=TIMESTAMP},
       </if>
+      <if test="remarks != null" >
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+      <if test="delFlag != null" >
+        del_flag = #{delFlag,jdbcType=CHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.hqf.generator.model.GenDataSource" >
+  <update id="updateByPrimaryKey" parameterType="com.hqf.test.model.GenDataSource" >
     update gen_data_source
     set description = #{description,jdbcType=VARCHAR},
       database_type = #{databaseType,jdbcType=VARCHAR},
@@ -171,7 +191,9 @@
       create_by = #{createBy,jdbcType=VARCHAR},
       create_date = #{createDate,jdbcType=TIMESTAMP},
       update_by = #{updateBy,jdbcType=VARCHAR},
-      update_date = #{updateDate,jdbcType=TIMESTAMP}
+      update_date = #{updateDate,jdbcType=TIMESTAMP},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      del_flag = #{delFlag,jdbcType=CHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
   <select id="selectSelective" resultMap="BaseResultMap" parameterType="com.hqf.generator.model.GenDataSource" >
