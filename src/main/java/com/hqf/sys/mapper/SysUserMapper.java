@@ -1,4 +1,4 @@
-package com.hqf.sys.dao;
+package com.hqf.sys.mapper;
 
 import com.hqf.sys.base.BaseDao;
 import com.hqf.sys.model.SysUser;

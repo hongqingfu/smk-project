@@ -91,9 +91,8 @@ $(document).ready(function () {
 });
 
 function detailInit(e) {
-    console.log(e);
     var parentId = e.data.id;
-    $("<div/>").appendTo(e.detailCell).kendoMEGrid({
+    var detailGrid = $("<div/>").appendTo(e.detailCell).kendoMEGrid({
         dataSource: {
             transport: {
                 read: {
@@ -129,6 +128,11 @@ function detailInit(e) {
                         isShow: {type: "string"},
                         permission: {type: "string"}
                     }
+                }
+            },
+            requestEnd: function (e) {
+                if (e.type == "create") {
+                    this.read();
                 }
             }
             //                filter: {field: "id", operator: "eq", value: e.data.id}
@@ -170,7 +174,8 @@ function detailInit(e) {
         beforeEdit: function(e) {
             e.model.parentId = parentId;
         }
-    });
+    }).data("kendoMEGrid");
+
 }
 
 //格式化时间

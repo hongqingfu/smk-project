@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.hqf.sys.dao.SysMenuMapper">
+<mapper namespace="com.hqf.sys.mapper.SysMenuMapper">
     <resultMap id="BaseResultMap" type="com.hqf.sys.model.SysMenu">
         <id column="id" property="id" jdbcType="VARCHAR"/>
         <result column="parent_id" property="parentId" jdbcType="VARCHAR"/>
@@ -231,5 +231,6 @@
         <if test="name != null and name != ''">
             and name like CONCAT('%', #{name}, '%')
         </if>
+        order by sort asc
     </select>
 </mapper>

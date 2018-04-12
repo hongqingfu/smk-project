@@ -74,6 +74,10 @@ public class SysController {
     public BaseMessage saveMenu(SysMenu sysMenu) {
         if (StringUtils.isEmpty(sysMenu.getParentId())) {
             sysMenu.setParentId("0"); // 表示最大的父节点
+        } else {
+            SysMenu pMenu = sysMenuService.get(sysMenu.getParentId());
+            pMenu.setHasChildren("1");
+            sysMenuService.save(pMenu);
         }
         int i = sysMenuService.save(sysMenu);
         if (i > 0) {

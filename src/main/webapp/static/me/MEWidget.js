@@ -271,7 +271,7 @@
                         var a = "<a href='" + href + "'>" + dataItem.item.name + "</a>";
                         return a;
                     } else {
-                        return dataItem.item.name
+                        return dataItem.item.name;
                     }
                 }
             });

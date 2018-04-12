@@ -203,6 +203,13 @@
             <artifactId>sitemesh</artifactId>
             <version>2.4.2</version>
         </dependency>
+
+        <!-- freemarker模板生成代码-->
+        <dependency>
+            <groupId>freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.9</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>smkendo</finalName>

@@ -20,24 +20,24 @@
     <div class="panel panel-primary">
         <div class="panel-heading">用户信息</div>
         <div class="panel-body">
-            <div class="form-group">
+            <div class="form-group row">
                 <label class="col-md-2 control-label">名称</label>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <input id="name" name="name" class="input-sm form-control" data-bind="value:name" required/>
                 </div>
                 <label class="col-md-2 control-label">归属公司</label>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <input id="companyId" name="companyId" class="input-sm form-control"
                            data-bind="value:companyId"
                            required/>
                 </div>
                 <label class="col-md-2 control-label">归属部门</label>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <input id="officeId" name="officeId" class="input-sm form-control" data-bind="value:officeId"
                            required/>
                 </div>
                 <label class="col-md-2 control-label">工号</label>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <input id="no" name="no" class="input-sm form-control "
                            data-bind="value:no"
                            required/>
@@ -46,22 +46,22 @@
             <div class="space-4"></div>
             <div class="form-group">
                 <label class="col-md-2 control-label">登录名</label>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <input id="loginName" name="loginName" class="input-sm form-control" data-bind="value:loginName" required/>
                 </div>
                 <label class="col-md-2 control-label">邮箱</label>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <input id="email" name="email" class="input-sm form-control"
                            data-bind="value:email"
                            required/>
                 </div>
                 <label class="col-md-2 control-label">电话</label>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <input id="phone" name="phone" class="input-sm form-control" data-bind="value:phone"
                            required/>
                 </div>
                 <label class="col-md-2 control-label">手机</label>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <input id="mobile" name="mobile" class="input-sm form-control "
                            data-bind="value:mobile"
                            required/>
