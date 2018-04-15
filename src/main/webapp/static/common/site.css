@@ -1,0 +1,1314 @@
+.k-pager-wrap>.k-link {
+  height: 23px;
+  line-height: 23px;
+}
+.k-pager-numbers .k-link, .k-pager-wrap {
+  line-height: 23px;
+}
+.k-grid-toolbar, .k-grouping-header{
+  padding:5px;
+}
+
+
+.navbar-inverse {
+  background-color: #1d508d;
+}
+.navbar-inverse .navbar-item:hover {
+  background-color: #143863;
+  cursor: pointer;
+}
+.navbar-inverse .navbar-text {
+  color: #EAEAEA;
+  margin-right: 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.navbar-inverse .navbar-icon {
+  font-size: 20px;
+  margin: 0;
+  padding: 15px 8px;
+}
+.navbar-inverse .dropdown-menu {
+  overflow: hidden;
+  border-color: #1d508d;
+}
+.navbar-inverse .dropdown-menu li {
+  margin-bottom: 3px;
+}
+.float-clear-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.navbar-header-menu-container {
+  height: 50px;
+  padding: 0 6px;
+}
+.navbar-header-menu-container .navbar-header-menu-icon {
+  vertical-align: middle;
+  height: 26px;
+}
+#left-nav {
+  overflow: hidden;
+  padding-top: 10px;
+}
+#left-menu {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+#center-pane {
+  padding: 14px 5px 0;
+}
+#body-container {
+  padding-top: 6px;
+}
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1 {
+  box-sizing: border-box;
+}
+.col-xs-1 .k-widget,
+.col-sm-1 .k-widget,
+.col-md-1 .k-widget,
+.col-lg-1 .k-widget,
+.col-xs-1 input,
+.col-sm-1 input,
+.col-md-1 input,
+.col-lg-1 input,
+.col-xs-1 select,
+.col-sm-1 select,
+.col-md-1 select,
+.col-lg-1 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-1 input[type=checkbox],
+.col-sm-1 input[type=checkbox],
+.col-md-1 input[type=checkbox],
+.col-lg-1 input[type=checkbox],
+.col-xs-1 input[type=radio],
+.col-sm-1 input[type=radio],
+.col-md-1 input[type=radio],
+.col-lg-1 input[type=radio] {
+  width: auto;
+}
+.col-xs-1 > input.form-control,
+.col-sm-1 > input.form-control,
+.col-md-1 > input.form-control,
+.col-lg-1 > input.form-control,
+.col-xs-1 > select.form-control,
+.col-sm-1 > select.form-control,
+.col-md-1 > select.form-control,
+.col-lg-1 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2 {
+  box-sizing: border-box;
+}
+.col-xs-2 .k-widget,
+.col-sm-2 .k-widget,
+.col-md-2 .k-widget,
+.col-lg-2 .k-widget,
+.col-xs-2 input,
+.col-sm-2 input,
+.col-md-2 input,
+.col-lg-2 input,
+.col-xs-2 select,
+.col-sm-2 select,
+.col-md-2 select,
+.col-lg-2 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-2 input[type=checkbox],
+.col-sm-2 input[type=checkbox],
+.col-md-2 input[type=checkbox],
+.col-lg-2 input[type=checkbox],
+.col-xs-2 input[type=radio],
+.col-sm-2 input[type=radio],
+.col-md-2 input[type=radio],
+.col-lg-2 input[type=radio] {
+  width: auto;
+}
+.col-xs-2 > input.form-control,
+.col-sm-2 > input.form-control,
+.col-md-2 > input.form-control,
+.col-lg-2 > input.form-control,
+.col-xs-2 > select.form-control,
+.col-sm-2 > select.form-control,
+.col-md-2 > select.form-control,
+.col-lg-2 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3 {
+  box-sizing: border-box;
+}
+.col-xs-3 .k-widget,
+.col-sm-3 .k-widget,
+.col-md-3 .k-widget,
+.col-lg-3 .k-widget,
+.col-xs-3 input,
+.col-sm-3 input,
+.col-md-3 input,
+.col-lg-3 input,
+.col-xs-3 select,
+.col-sm-3 select,
+.col-md-3 select,
+.col-lg-3 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-3 input[type=checkbox],
+.col-sm-3 input[type=checkbox],
+.col-md-3 input[type=checkbox],
+.col-lg-3 input[type=checkbox],
+.col-xs-3 input[type=radio],
+.col-sm-3 input[type=radio],
+.col-md-3 input[type=radio],
+.col-lg-3 input[type=radio] {
+  width: auto;
+}
+.col-xs-3 > input.form-control,
+.col-sm-3 > input.form-control,
+.col-md-3 > input.form-control,
+.col-lg-3 > input.form-control,
+.col-xs-3 > select.form-control,
+.col-sm-3 > select.form-control,
+.col-md-3 > select.form-control,
+.col-lg-3 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4 {
+  box-sizing: border-box;
+}
+.col-xs-4 .k-widget,
+.col-sm-4 .k-widget,
+.col-md-4 .k-widget,
+.col-lg-4 .k-widget,
+.col-xs-4 input,
+.col-sm-4 input,
+.col-md-4 input,
+.col-lg-4 input,
+.col-xs-4 select,
+.col-sm-4 select,
+.col-md-4 select,
+.col-lg-4 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-4 input[type=checkbox],
+.col-sm-4 input[type=checkbox],
+.col-md-4 input[type=checkbox],
+.col-lg-4 input[type=checkbox],
+.col-xs-4 input[type=radio],
+.col-sm-4 input[type=radio],
+.col-md-4 input[type=radio],
+.col-lg-4 input[type=radio] {
+  width: auto;
+}
+.col-xs-4 > input.form-control,
+.col-sm-4 > input.form-control,
+.col-md-4 > input.form-control,
+.col-lg-4 > input.form-control,
+.col-xs-4 > select.form-control,
+.col-sm-4 > select.form-control,
+.col-md-4 > select.form-control,
+.col-lg-4 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5 {
+  box-sizing: border-box;
+}
+.col-xs-5 .k-widget,
+.col-sm-5 .k-widget,
+.col-md-5 .k-widget,
+.col-lg-5 .k-widget,
+.col-xs-5 input,
+.col-sm-5 input,
+.col-md-5 input,
+.col-lg-5 input,
+.col-xs-5 select,
+.col-sm-5 select,
+.col-md-5 select,
+.col-lg-5 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-5 input[type=checkbox],
+.col-sm-5 input[type=checkbox],
+.col-md-5 input[type=checkbox],
+.col-lg-5 input[type=checkbox],
+.col-xs-5 input[type=radio],
+.col-sm-5 input[type=radio],
+.col-md-5 input[type=radio],
+.col-lg-5 input[type=radio] {
+  width: auto;
+}
+.col-xs-5 > input.form-control,
+.col-sm-5 > input.form-control,
+.col-md-5 > input.form-control,
+.col-lg-5 > input.form-control,
+.col-xs-5 > select.form-control,
+.col-sm-5 > select.form-control,
+.col-md-5 > select.form-control,
+.col-lg-5 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6 {
+  box-sizing: border-box;
+}
+.col-xs-6 .k-widget,
+.col-sm-6 .k-widget,
+.col-md-6 .k-widget,
+.col-lg-6 .k-widget,
+.col-xs-6 input,
+.col-sm-6 input,
+.col-md-6 input,
+.col-lg-6 input,
+.col-xs-6 select,
+.col-sm-6 select,
+.col-md-6 select,
+.col-lg-6 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-6 input[type=checkbox],
+.col-sm-6 input[type=checkbox],
+.col-md-6 input[type=checkbox],
+.col-lg-6 input[type=checkbox],
+.col-xs-6 input[type=radio],
+.col-sm-6 input[type=radio],
+.col-md-6 input[type=radio],
+.col-lg-6 input[type=radio] {
+  width: auto;
+}
+.col-xs-6 > input.form-control,
+.col-sm-6 > input.form-control,
+.col-md-6 > input.form-control,
+.col-lg-6 > input.form-control,
+.col-xs-6 > select.form-control,
+.col-sm-6 > select.form-control,
+.col-md-6 > select.form-control,
+.col-lg-6 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7 {
+  box-sizing: border-box;
+}
+.col-xs-7 .k-widget,
+.col-sm-7 .k-widget,
+.col-md-7 .k-widget,
+.col-lg-7 .k-widget,
+.col-xs-7 input,
+.col-sm-7 input,
+.col-md-7 input,
+.col-lg-7 input,
+.col-xs-7 select,
+.col-sm-7 select,
+.col-md-7 select,
+.col-lg-7 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-7 input[type=checkbox],
+.col-sm-7 input[type=checkbox],
+.col-md-7 input[type=checkbox],
+.col-lg-7 input[type=checkbox],
+.col-xs-7 input[type=radio],
+.col-sm-7 input[type=radio],
+.col-md-7 input[type=radio],
+.col-lg-7 input[type=radio] {
+  width: auto;
+}
+.col-xs-7 > input.form-control,
+.col-sm-7 > input.form-control,
+.col-md-7 > input.form-control,
+.col-lg-7 > input.form-control,
+.col-xs-7 > select.form-control,
+.col-sm-7 > select.form-control,
+.col-md-7 > select.form-control,
+.col-lg-7 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8 {
+  box-sizing: border-box;
+}
+.col-xs-8 .k-widget,
+.col-sm-8 .k-widget,
+.col-md-8 .k-widget,
+.col-lg-8 .k-widget,
+.col-xs-8 input,
+.col-sm-8 input,
+.col-md-8 input,
+.col-lg-8 input,
+.col-xs-8 select,
+.col-sm-8 select,
+.col-md-8 select,
+.col-lg-8 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-8 input[type=checkbox],
+.col-sm-8 input[type=checkbox],
+.col-md-8 input[type=checkbox],
+.col-lg-8 input[type=checkbox],
+.col-xs-8 input[type=radio],
+.col-sm-8 input[type=radio],
+.col-md-8 input[type=radio],
+.col-lg-8 input[type=radio] {
+  width: auto;
+}
+.col-xs-8 > input.form-control,
+.col-sm-8 > input.form-control,
+.col-md-8 > input.form-control,
+.col-lg-8 > input.form-control,
+.col-xs-8 > select.form-control,
+.col-sm-8 > select.form-control,
+.col-md-8 > select.form-control,
+.col-lg-8 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9 {
+  box-sizing: border-box;
+}
+.col-xs-9 .k-widget,
+.col-sm-9 .k-widget,
+.col-md-9 .k-widget,
+.col-lg-9 .k-widget,
+.col-xs-9 input,
+.col-sm-9 input,
+.col-md-9 input,
+.col-lg-9 input,
+.col-xs-9 select,
+.col-sm-9 select,
+.col-md-9 select,
+.col-lg-9 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-9 input[type=checkbox],
+.col-sm-9 input[type=checkbox],
+.col-md-9 input[type=checkbox],
+.col-lg-9 input[type=checkbox],
+.col-xs-9 input[type=radio],
+.col-sm-9 input[type=radio],
+.col-md-9 input[type=radio],
+.col-lg-9 input[type=radio] {
+  width: auto;
+}
+.col-xs-9 > input.form-control,
+.col-sm-9 > input.form-control,
+.col-md-9 > input.form-control,
+.col-lg-9 > input.form-control,
+.col-xs-9 > select.form-control,
+.col-sm-9 > select.form-control,
+.col-md-9 > select.form-control,
+.col-lg-9 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10 {
+  box-sizing: border-box;
+}
+.col-xs-10 .k-widget,
+.col-sm-10 .k-widget,
+.col-md-10 .k-widget,
+.col-lg-10 .k-widget,
+.col-xs-10 input,
+.col-sm-10 input,
+.col-md-10 input,
+.col-lg-10 input,
+.col-xs-10 select,
+.col-sm-10 select,
+.col-md-10 select,
+.col-lg-10 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-10 input[type=checkbox],
+.col-sm-10 input[type=checkbox],
+.col-md-10 input[type=checkbox],
+.col-lg-10 input[type=checkbox],
+.col-xs-10 input[type=radio],
+.col-sm-10 input[type=radio],
+.col-md-10 input[type=radio],
+.col-lg-10 input[type=radio] {
+  width: auto;
+}
+.col-xs-10 > input.form-control,
+.col-sm-10 > input.form-control,
+.col-md-10 > input.form-control,
+.col-lg-10 > input.form-control,
+.col-xs-10 > select.form-control,
+.col-sm-10 > select.form-control,
+.col-md-10 > select.form-control,
+.col-lg-10 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11 {
+  box-sizing: border-box;
+}
+.col-xs-11 .k-widget,
+.col-sm-11 .k-widget,
+.col-md-11 .k-widget,
+.col-lg-11 .k-widget,
+.col-xs-11 input,
+.col-sm-11 input,
+.col-md-11 input,
+.col-lg-11 input,
+.col-xs-11 select,
+.col-sm-11 select,
+.col-md-11 select,
+.col-lg-11 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-11 input[type=checkbox],
+.col-sm-11 input[type=checkbox],
+.col-md-11 input[type=checkbox],
+.col-lg-11 input[type=checkbox],
+.col-xs-11 input[type=radio],
+.col-sm-11 input[type=radio],
+.col-md-11 input[type=radio],
+.col-lg-11 input[type=radio] {
+  width: auto;
+}
+.col-xs-11 > input.form-control,
+.col-sm-11 > input.form-control,
+.col-md-11 > input.form-control,
+.col-lg-11 > input.form-control,
+.col-xs-11 > select.form-control,
+.col-sm-11 > select.form-control,
+.col-md-11 > select.form-control,
+.col-lg-11 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+  box-sizing: border-box;
+}
+.col-xs-12 .k-widget,
+.col-sm-12 .k-widget,
+.col-md-12 .k-widget,
+.col-lg-12 .k-widget,
+.col-xs-12 input,
+.col-sm-12 input,
+.col-md-12 input,
+.col-lg-12 input,
+.col-xs-12 select,
+.col-sm-12 select,
+.col-md-12 select,
+.col-lg-12 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-12 input[type=checkbox],
+.col-sm-12 input[type=checkbox],
+.col-md-12 input[type=checkbox],
+.col-lg-12 input[type=checkbox],
+.col-xs-12 input[type=radio],
+.col-sm-12 input[type=radio],
+.col-md-12 input[type=radio],
+.col-lg-12 input[type=radio] {
+  width: auto;
+}
+.col-xs-12 > input.form-control,
+.col-sm-12 > input.form-control,
+.col-md-12 > input.form-control,
+.col-lg-12 > input.form-control,
+.col-xs-12 > select.form-control,
+.col-sm-12 > select.form-control,
+.col-md-12 > select.form-control,
+.col-lg-12 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-13,
+.col-sm-13,
+.col-md-13,
+.col-lg-13 {
+  box-sizing: border-box;
+}
+.col-xs-13 .k-widget,
+.col-sm-13 .k-widget,
+.col-md-13 .k-widget,
+.col-lg-13 .k-widget,
+.col-xs-13 input,
+.col-sm-13 input,
+.col-md-13 input,
+.col-lg-13 input,
+.col-xs-13 select,
+.col-sm-13 select,
+.col-md-13 select,
+.col-lg-13 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-13 input[type=checkbox],
+.col-sm-13 input[type=checkbox],
+.col-md-13 input[type=checkbox],
+.col-lg-13 input[type=checkbox],
+.col-xs-13 input[type=radio],
+.col-sm-13 input[type=radio],
+.col-md-13 input[type=radio],
+.col-lg-13 input[type=radio] {
+  width: auto;
+}
+.col-xs-13 > input.form-control,
+.col-sm-13 > input.form-control,
+.col-md-13 > input.form-control,
+.col-lg-13 > input.form-control,
+.col-xs-13 > select.form-control,
+.col-sm-13 > select.form-control,
+.col-md-13 > select.form-control,
+.col-lg-13 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-14,
+.col-sm-14,
+.col-md-14,
+.col-lg-14 {
+  box-sizing: border-box;
+}
+.col-xs-14 .k-widget,
+.col-sm-14 .k-widget,
+.col-md-14 .k-widget,
+.col-lg-14 .k-widget,
+.col-xs-14 input,
+.col-sm-14 input,
+.col-md-14 input,
+.col-lg-14 input,
+.col-xs-14 select,
+.col-sm-14 select,
+.col-md-14 select,
+.col-lg-14 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-14 input[type=checkbox],
+.col-sm-14 input[type=checkbox],
+.col-md-14 input[type=checkbox],
+.col-lg-14 input[type=checkbox],
+.col-xs-14 input[type=radio],
+.col-sm-14 input[type=radio],
+.col-md-14 input[type=radio],
+.col-lg-14 input[type=radio] {
+  width: auto;
+}
+.col-xs-14 > input.form-control,
+.col-sm-14 > input.form-control,
+.col-md-14 > input.form-control,
+.col-lg-14 > input.form-control,
+.col-xs-14 > select.form-control,
+.col-sm-14 > select.form-control,
+.col-md-14 > select.form-control,
+.col-lg-14 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  box-sizing: border-box;
+}
+.col-xs-15 .k-widget,
+.col-sm-15 .k-widget,
+.col-md-15 .k-widget,
+.col-lg-15 .k-widget,
+.col-xs-15 input,
+.col-sm-15 input,
+.col-md-15 input,
+.col-lg-15 input,
+.col-xs-15 select,
+.col-sm-15 select,
+.col-md-15 select,
+.col-lg-15 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-15 input[type=checkbox],
+.col-sm-15 input[type=checkbox],
+.col-md-15 input[type=checkbox],
+.col-lg-15 input[type=checkbox],
+.col-xs-15 input[type=radio],
+.col-sm-15 input[type=radio],
+.col-md-15 input[type=radio],
+.col-lg-15 input[type=radio] {
+  width: auto;
+}
+.col-xs-15 > input.form-control,
+.col-sm-15 > input.form-control,
+.col-md-15 > input.form-control,
+.col-lg-15 > input.form-control,
+.col-xs-15 > select.form-control,
+.col-sm-15 > select.form-control,
+.col-md-15 > select.form-control,
+.col-lg-15 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-16,
+.col-sm-16,
+.col-md-16,
+.col-lg-16 {
+  box-sizing: border-box;
+}
+.col-xs-16 .k-widget,
+.col-sm-16 .k-widget,
+.col-md-16 .k-widget,
+.col-lg-16 .k-widget,
+.col-xs-16 input,
+.col-sm-16 input,
+.col-md-16 input,
+.col-lg-16 input,
+.col-xs-16 select,
+.col-sm-16 select,
+.col-md-16 select,
+.col-lg-16 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-16 input[type=checkbox],
+.col-sm-16 input[type=checkbox],
+.col-md-16 input[type=checkbox],
+.col-lg-16 input[type=checkbox],
+.col-xs-16 input[type=radio],
+.col-sm-16 input[type=radio],
+.col-md-16 input[type=radio],
+.col-lg-16 input[type=radio] {
+  width: auto;
+}
+.col-xs-16 > input.form-control,
+.col-sm-16 > input.form-control,
+.col-md-16 > input.form-control,
+.col-lg-16 > input.form-control,
+.col-xs-16 > select.form-control,
+.col-sm-16 > select.form-control,
+.col-md-16 > select.form-control,
+.col-lg-16 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-17,
+.col-sm-17,
+.col-md-17,
+.col-lg-17 {
+  box-sizing: border-box;
+}
+.col-xs-17 .k-widget,
+.col-sm-17 .k-widget,
+.col-md-17 .k-widget,
+.col-lg-17 .k-widget,
+.col-xs-17 input,
+.col-sm-17 input,
+.col-md-17 input,
+.col-lg-17 input,
+.col-xs-17 select,
+.col-sm-17 select,
+.col-md-17 select,
+.col-lg-17 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-17 input[type=checkbox],
+.col-sm-17 input[type=checkbox],
+.col-md-17 input[type=checkbox],
+.col-lg-17 input[type=checkbox],
+.col-xs-17 input[type=radio],
+.col-sm-17 input[type=radio],
+.col-md-17 input[type=radio],
+.col-lg-17 input[type=radio] {
+  width: auto;
+}
+.col-xs-17 > input.form-control,
+.col-sm-17 > input.form-control,
+.col-md-17 > input.form-control,
+.col-lg-17 > input.form-control,
+.col-xs-17 > select.form-control,
+.col-sm-17 > select.form-control,
+.col-md-17 > select.form-control,
+.col-lg-17 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-18,
+.col-sm-18,
+.col-md-18,
+.col-lg-18 {
+  box-sizing: border-box;
+}
+.col-xs-18 .k-widget,
+.col-sm-18 .k-widget,
+.col-md-18 .k-widget,
+.col-lg-18 .k-widget,
+.col-xs-18 input,
+.col-sm-18 input,
+.col-md-18 input,
+.col-lg-18 input,
+.col-xs-18 select,
+.col-sm-18 select,
+.col-md-18 select,
+.col-lg-18 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-18 input[type=checkbox],
+.col-sm-18 input[type=checkbox],
+.col-md-18 input[type=checkbox],
+.col-lg-18 input[type=checkbox],
+.col-xs-18 input[type=radio],
+.col-sm-18 input[type=radio],
+.col-md-18 input[type=radio],
+.col-lg-18 input[type=radio] {
+  width: auto;
+}
+.col-xs-18 > input.form-control,
+.col-sm-18 > input.form-control,
+.col-md-18 > input.form-control,
+.col-lg-18 > input.form-control,
+.col-xs-18 > select.form-control,
+.col-sm-18 > select.form-control,
+.col-md-18 > select.form-control,
+.col-lg-18 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-19,
+.col-sm-19,
+.col-md-19,
+.col-lg-19 {
+  box-sizing: border-box;
+}
+.col-xs-19 .k-widget,
+.col-sm-19 .k-widget,
+.col-md-19 .k-widget,
+.col-lg-19 .k-widget,
+.col-xs-19 input,
+.col-sm-19 input,
+.col-md-19 input,
+.col-lg-19 input,
+.col-xs-19 select,
+.col-sm-19 select,
+.col-md-19 select,
+.col-lg-19 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-19 input[type=checkbox],
+.col-sm-19 input[type=checkbox],
+.col-md-19 input[type=checkbox],
+.col-lg-19 input[type=checkbox],
+.col-xs-19 input[type=radio],
+.col-sm-19 input[type=radio],
+.col-md-19 input[type=radio],
+.col-lg-19 input[type=radio] {
+  width: auto;
+}
+.col-xs-19 > input.form-control,
+.col-sm-19 > input.form-control,
+.col-md-19 > input.form-control,
+.col-lg-19 > input.form-control,
+.col-xs-19 > select.form-control,
+.col-sm-19 > select.form-control,
+.col-md-19 > select.form-control,
+.col-lg-19 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-20,
+.col-sm-20,
+.col-md-20,
+.col-lg-20 {
+  box-sizing: border-box;
+}
+.col-xs-20 .k-widget,
+.col-sm-20 .k-widget,
+.col-md-20 .k-widget,
+.col-lg-20 .k-widget,
+.col-xs-20 input,
+.col-sm-20 input,
+.col-md-20 input,
+.col-lg-20 input,
+.col-xs-20 select,
+.col-sm-20 select,
+.col-md-20 select,
+.col-lg-20 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-20 input[type=checkbox],
+.col-sm-20 input[type=checkbox],
+.col-md-20 input[type=checkbox],
+.col-lg-20 input[type=checkbox],
+.col-xs-20 input[type=radio],
+.col-sm-20 input[type=radio],
+.col-md-20 input[type=radio],
+.col-lg-20 input[type=radio] {
+  width: auto;
+}
+.col-xs-20 > input.form-control,
+.col-sm-20 > input.form-control,
+.col-md-20 > input.form-control,
+.col-lg-20 > input.form-control,
+.col-xs-20 > select.form-control,
+.col-sm-20 > select.form-control,
+.col-md-20 > select.form-control,
+.col-lg-20 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-21,
+.col-sm-21,
+.col-md-21,
+.col-lg-21 {
+  box-sizing: border-box;
+}
+.col-xs-21 .k-widget,
+.col-sm-21 .k-widget,
+.col-md-21 .k-widget,
+.col-lg-21 .k-widget,
+.col-xs-21 input,
+.col-sm-21 input,
+.col-md-21 input,
+.col-lg-21 input,
+.col-xs-21 select,
+.col-sm-21 select,
+.col-md-21 select,
+.col-lg-21 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-21 input[type=checkbox],
+.col-sm-21 input[type=checkbox],
+.col-md-21 input[type=checkbox],
+.col-lg-21 input[type=checkbox],
+.col-xs-21 input[type=radio],
+.col-sm-21 input[type=radio],
+.col-md-21 input[type=radio],
+.col-lg-21 input[type=radio] {
+  width: auto;
+}
+.col-xs-21 > input.form-control,
+.col-sm-21 > input.form-control,
+.col-md-21 > input.form-control,
+.col-lg-21 > input.form-control,
+.col-xs-21 > select.form-control,
+.col-sm-21 > select.form-control,
+.col-md-21 > select.form-control,
+.col-lg-21 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-22,
+.col-sm-22,
+.col-md-22,
+.col-lg-22 {
+  box-sizing: border-box;
+}
+.col-xs-22 .k-widget,
+.col-sm-22 .k-widget,
+.col-md-22 .k-widget,
+.col-lg-22 .k-widget,
+.col-xs-22 input,
+.col-sm-22 input,
+.col-md-22 input,
+.col-lg-22 input,
+.col-xs-22 select,
+.col-sm-22 select,
+.col-md-22 select,
+.col-lg-22 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-22 input[type=checkbox],
+.col-sm-22 input[type=checkbox],
+.col-md-22 input[type=checkbox],
+.col-lg-22 input[type=checkbox],
+.col-xs-22 input[type=radio],
+.col-sm-22 input[type=radio],
+.col-md-22 input[type=radio],
+.col-lg-22 input[type=radio] {
+  width: auto;
+}
+.col-xs-22 > input.form-control,
+.col-sm-22 > input.form-control,
+.col-md-22 > input.form-control,
+.col-lg-22 > input.form-control,
+.col-xs-22 > select.form-control,
+.col-sm-22 > select.form-control,
+.col-md-22 > select.form-control,
+.col-lg-22 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-23,
+.col-sm-23,
+.col-md-23,
+.col-lg-23 {
+  box-sizing: border-box;
+}
+.col-xs-23 .k-widget,
+.col-sm-23 .k-widget,
+.col-md-23 .k-widget,
+.col-lg-23 .k-widget,
+.col-xs-23 input,
+.col-sm-23 input,
+.col-md-23 input,
+.col-lg-23 input,
+.col-xs-23 select,
+.col-sm-23 select,
+.col-md-23 select,
+.col-lg-23 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-23 input[type=checkbox],
+.col-sm-23 input[type=checkbox],
+.col-md-23 input[type=checkbox],
+.col-lg-23 input[type=checkbox],
+.col-xs-23 input[type=radio],
+.col-sm-23 input[type=radio],
+.col-md-23 input[type=radio],
+.col-lg-23 input[type=radio] {
+  width: auto;
+}
+.col-xs-23 > input.form-control,
+.col-sm-23 > input.form-control,
+.col-md-23 > input.form-control,
+.col-lg-23 > input.form-control,
+.col-xs-23 > select.form-control,
+.col-sm-23 > select.form-control,
+.col-md-23 > select.form-control,
+.col-lg-23 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-24,
+.col-sm-24,
+.col-md-24,
+.col-lg-24 {
+  box-sizing: border-box;
+}
+.col-xs-24 .k-widget,
+.col-sm-24 .k-widget,
+.col-md-24 .k-widget,
+.col-lg-24 .k-widget,
+.col-xs-24 input,
+.col-sm-24 input,
+.col-md-24 input,
+.col-lg-24 input,
+.col-xs-24 select,
+.col-sm-24 select,
+.col-md-24 select,
+.col-lg-24 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-24 input[type=checkbox],
+.col-sm-24 input[type=checkbox],
+.col-md-24 input[type=checkbox],
+.col-lg-24 input[type=checkbox],
+.col-xs-24 input[type=radio],
+.col-sm-24 input[type=radio],
+.col-md-24 input[type=radio],
+.col-lg-24 input[type=radio] {
+  width: auto;
+}
+.col-xs-24 > input.form-control,
+.col-sm-24 > input.form-control,
+.col-md-24 > input.form-control,
+.col-lg-24 > input.form-control,
+.col-xs-24 > select.form-control,
+.col-sm-24 > select.form-control,
+.col-md-24 > select.form-control,
+.col-lg-24 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-25,
+.col-sm-25,
+.col-md-25,
+.col-lg-25 {
+  box-sizing: border-box;
+}
+.col-xs-25 .k-widget,
+.col-sm-25 .k-widget,
+.col-md-25 .k-widget,
+.col-lg-25 .k-widget,
+.col-xs-25 input,
+.col-sm-25 input,
+.col-md-25 input,
+.col-lg-25 input,
+.col-xs-25 select,
+.col-sm-25 select,
+.col-md-25 select,
+.col-lg-25 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-25 input[type=checkbox],
+.col-sm-25 input[type=checkbox],
+.col-md-25 input[type=checkbox],
+.col-lg-25 input[type=checkbox],
+.col-xs-25 input[type=radio],
+.col-sm-25 input[type=radio],
+.col-md-25 input[type=radio],
+.col-lg-25 input[type=radio] {
+  width: auto;
+}
+.col-xs-25 > input.form-control,
+.col-sm-25 > input.form-control,
+.col-md-25 > input.form-control,
+.col-lg-25 > input.form-control,
+.col-xs-25 > select.form-control,
+.col-sm-25 > select.form-control,
+.col-md-25 > select.form-control,
+.col-lg-25 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-26,
+.col-sm-26,
+.col-md-26,
+.col-lg-26 {
+  box-sizing: border-box;
+}
+.col-xs-26 .k-widget,
+.col-sm-26 .k-widget,
+.col-md-26 .k-widget,
+.col-lg-26 .k-widget,
+.col-xs-26 input,
+.col-sm-26 input,
+.col-md-26 input,
+.col-lg-26 input,
+.col-xs-26 select,
+.col-sm-26 select,
+.col-md-26 select,
+.col-lg-26 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-26 input[type=checkbox],
+.col-sm-26 input[type=checkbox],
+.col-md-26 input[type=checkbox],
+.col-lg-26 input[type=checkbox],
+.col-xs-26 input[type=radio],
+.col-sm-26 input[type=radio],
+.col-md-26 input[type=radio],
+.col-lg-26 input[type=radio] {
+  width: auto;
+}
+.col-xs-26 > input.form-control,
+.col-sm-26 > input.form-control,
+.col-md-26 > input.form-control,
+.col-lg-26 > input.form-control,
+.col-xs-26 > select.form-control,
+.col-sm-26 > select.form-control,
+.col-md-26 > select.form-control,
+.col-lg-26 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-27,
+.col-sm-27,
+.col-md-27,
+.col-lg-27 {
+  box-sizing: border-box;
+}
+.col-xs-27 .k-widget,
+.col-sm-27 .k-widget,
+.col-md-27 .k-widget,
+.col-lg-27 .k-widget,
+.col-xs-27 input,
+.col-sm-27 input,
+.col-md-27 input,
+.col-lg-27 input,
+.col-xs-27 select,
+.col-sm-27 select,
+.col-md-27 select,
+.col-lg-27 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-27 input[type=checkbox],
+.col-sm-27 input[type=checkbox],
+.col-md-27 input[type=checkbox],
+.col-lg-27 input[type=checkbox],
+.col-xs-27 input[type=radio],
+.col-sm-27 input[type=radio],
+.col-md-27 input[type=radio],
+.col-lg-27 input[type=radio] {
+  width: auto;
+}
+.col-xs-27 > input.form-control,
+.col-sm-27 > input.form-control,
+.col-md-27 > input.form-control,
+.col-lg-27 > input.form-control,
+.col-xs-27 > select.form-control,
+.col-sm-27 > select.form-control,
+.col-md-27 > select.form-control,
+.col-lg-27 > select.form-control {
+  box-sizing: border-box;
+}
+.col-xs-28,
+.col-sm-28,
+.col-md-28,
+.col-lg-28 {
+  box-sizing: border-box;
+}
+.col-xs-28 .k-widget,
+.col-sm-28 .k-widget,
+.col-md-28 .k-widget,
+.col-lg-28 .k-widget,
+.col-xs-28 input,
+.col-sm-28 input,
+.col-md-28 input,
+.col-lg-28 input,
+.col-xs-28 select,
+.col-sm-28 select,
+.col-md-28 select,
+.col-lg-28 select {
+  width: 100%;
+  height: auto;
+}
+.col-xs-28 input[type=checkbox],
+.col-sm-28 input[type=checkbox],
+.col-md-28 input[type=checkbox],
+.col-lg-28 input[type=checkbox],
+.col-xs-28 input[type=radio],
+.col-sm-28 input[type=radio],
+.col-md-28 input[type=radio],
+.col-lg-28 input[type=radio] {
+  width: auto;
+}
+.col-xs-28 > input.form-control,
+.col-sm-28 > input.form-control,
+.col-md-28 > input.form-control,
+.col-lg-28 > input.form-control,
+.col-xs-28 > select.form-control,
+.col-sm-28 > select.form-control,
+.col-md-28 > select.form-control,
+.col-lg-28 > select.form-control {
+  box-sizing: border-box;
+}
+.k-widget.form-control {
+  height: auto;
+}
+.k-tabstrip > .k-content,
+.k-panelbar .k-tabstrip > .k-content {
+  padding: .5em .3em;
+}
+.form-group,
+.control-label {
+  box-sizing: border-box;
+}
+.checkbox-inline input,
+.radio-inline input,
+.checkbox input,
+.radio input {
+  margin-top: 0;
+  vertical-align: middle;
+}
+.alert span {
+  font-size: 16px !important;
+}
+.modal-header {
+  padding: 10px;
+}
+.modal-body {
+  padding: 10px;
+}
+.modal-footer {
+  padding: 8px;
+}
+.btn .glyphicon {
+  margin-right: 4px;
+}
+.me-uploader-btn-upload {
+  position: relative;
+}
+.me-uploader-btn-upload input[type=file] {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  direction: ltr;
+  cursor: pointer;
+}
+.me-upload-window .progress {
+  margin-bottom: 2px;
+}
+.k-in.k-state-selected {
+  color: white !important;
+}
+.open .dropdown-menu {
+  opacity: 1;
+}
+.k-grid td {
+  white-space: nowrap;
+}
+.k-grid td.toolbar-column {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.k-grid td.toolbar-column .btn {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+span.k-tooltip {
+  float: left;
+}
+.k-alt:not(.k-state-selected) {
+  background-color: #DFF2FF;
+}
+body .k-block,
+body .k-widget,
+body .k-popup,
+body .k-content,
+body .k-toolbar,
+body .k-dropdown .k-input {
+  color: #222;
+}
+#menu span.glyphicon-folder-open{
+  color:#c7a226;
+}
+#menu span.glyphicon{
+  margin-left:-5px;
+  padding-right:5px;
+}
+
+.single-uploader-form .fileinput-button {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.single-uploader-form .fileinput-button input{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+}

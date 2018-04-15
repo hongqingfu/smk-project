@@ -16,6 +16,8 @@
     <link rel="stylesheet" type="text/css" href="${ctxStatic}/kendo/kendo.common.min.css"/>
     <link rel="stylesheet" type="text/css" href="${ctxStatic}/kendo/kendo.bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="${ctxStatic}/common/web_common.css"/>
+    <%--<link rel="stylesheet" type="text/css" href="${ctxStatic}/common/commons.css"/>--%>
+    <%--<link rel="stylesheet" type="text/css" href="${ctxStatic}/common/site.css"/>--%>
     <%--<link rel="stylesheet" type="text/css" href="${ctxStatic}/kendo/kendo.silver.min.css"/>--%>
     <%--<link rel="stylesheet" type="text/css" href="${ctxStatic}/common/styles.css"/>--%>
 

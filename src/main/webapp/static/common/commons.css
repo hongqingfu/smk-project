@@ -1,0 +1,129 @@
+/*解决kendoui和bootstrap样式的冲突*/
+/* ================================================================ */
+/*.form-bootstrap-fix * {*/
+/*-moz-box-sizing: border-box !important;*/
+/*-webkit-box-sizing: border-box !important;*/
+/*box-sizing: border-box !important;*/
+/*}*/
+/* reset everything to the default box model */
+/**, :before, :after*/
+/*{*/
+	/*-webkit-box-sizing: content-box;*/
+	/*-moz-box-sizing: content-box;*/
+	/*box-sizing: content-box;*/
+/*}*/
+/* set a border-box model only to elements that need it */
+/*.form-control, !* if this class is applied to a Kendo UI widget, its layout may change *!*/
+/*.container,*/
+/*.container-fluid,*/
+/*.row,*/
+/*.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1,*/
+/*.col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,*/
+/*.col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,*/
+/*.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,*/
+/*.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5,*/
+/*.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,*/
+/*.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7,*/
+/*.col-xs-8, .col-sm-8, .col-md-8, .col-lg-8,*/
+/*.col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,*/
+/*.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10,*/
+/*.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11,*/
+/*.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12*/
+/*{*/
+	/*-webkit-box-sizing: border-box;*/
+	/*-moz-box-sizing: border-box;;*/
+	/*box-sizing: border-box;*/
+/*}*/
+/*.reset-box-sizing,*/
+/*.reset-box-sizing *,*/
+/*.reset-box-sizing *:before,*/
+/*.reset-box-sizing *:after {*/
+	/*-webkit-box-sizing: content-box;*/
+	/*-moz-box-sizing: content-box;*/
+	/*box-sizing: content-box;*/
+/*}*/
+/*.container-fluid {*/
+	/*padding-right: 0px;*/
+	/*padding-left: 0px;*/
+	/*margin-right: auto;*/
+	/*margin-left: auto;*/
+/*}*/
+/* ================================================================ */
+html{
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+}
+iframe {
+	width: 100%;
+	height: 100%;
+}
+body{
+	height: inherit;
+	background: #F5F5F5;
+	color: #222;
+	font-size: 12px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	padding-top: 45px;
+}
+.logo{
+	width: 100%;
+	background-color: #1d508d;
+	display: block;
+	margin-top:-45px;
+}
+.logo image{
+	padding-left: 15px;
+}
+#main-panel{
+	top:50px;
+	bottom:0px;
+	position: absolute;
+	overflow: hidden;
+	width:100%;
+}
+#main-splider{
+	height:100%;
+	overflow: hidden;
+}
+#left-panel{
+	width:80px;
+}
+#content-panel {
+	overflow-x: hidden;
+}
+.k-button{
+	padding:3px 7px;
+	line-height: 1.0;
+}
+.k-tabstrip-items .k-state-default, .k-ie7 .k-tabstrip-items .k-state-default .k-loading {
+	border-color: #dbdbde;
+}
+
+.k-autocomplete .k-input, .k-dropdown-wrap .k-input, .k-numeric-wrap .k-input,.k-picker-wrap .k-input, .k-picker-wrap .k-input, .k-selectbox .k-input, .k-textbox>input {
+	height: 1.6em;
+	line-height: 1.6em;
+}
+.k-combobox .k-dropdown-wrap:before, .k-numeric-wrap:before, .k-picker-wrap:before{
+	height:1.6em;
+}
+.k-icon, .k-tool-icon{
+	margin-bottom: 3px;
+}
+.k-autocomplete-clearable .k-input, .k-combobox-clearable .k-input, .k-multiselect-clearable .k-input{
+	height:1.6em;
+	line-height: 1.6em;
+}
+/***************************PQMS项目特的样式************************start***********************/
+/*解决查询条件的汉字超过5个时，换行问题 chq 20171012*/
+/*@media (min-width: 768px){*/
+	/*.col-sm-1, .col-md-1 {*/
+		/*width: 11%;*/
+	/*}*/
+/*}*/
+/***************************PQMS项目特的样式*************************end**********************/

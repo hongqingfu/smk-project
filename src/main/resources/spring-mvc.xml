@@ -76,7 +76,7 @@
     </bean>
 
     <!--  配置静态资源，防止被springmvc过滤 -->
-    <mvc:resources location="/" mapping="/**/*.html"/>
+    <!--<mvc:resources location="/" mapping="/**/*.html"/>
     <mvc:resources location="/" mapping="/**/*.js"/>
     <mvc:resources location="/" mapping="/**/*.css"/>
     <mvc:resources location="/" mapping="/**/*.png"/>
@@ -86,7 +86,13 @@
     <mvc:resources location="/" mapping="/**/*.ttf"/>
     <mvc:resources location="/" mapping="/**/*.jpg"/>
     <mvc:resources location="/" mapping="/**/*.mp3"/>
-    <mvc:resources location="/" mapping="/**/*.mp4"/>
+    <mvc:resources location="/" mapping="/**/*.mp4"/>-->
+
+    <!-- 对静态资源文件的访问， 将无法mapping到Controller的path交给default servlet handler处理 -->
+    <mvc:default-servlet-handler />
+
+    <!-- 静态资源映射 -->
+    <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
 
 
 </beans>
