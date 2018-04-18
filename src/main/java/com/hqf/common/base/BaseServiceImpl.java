@@ -31,7 +31,7 @@ public class BaseServiceImpl<D extends BaseDao<T>, T extends BaseEntity> {
     public int save(T record) {
         if ("".equals(record.getId()) || null == record.getId()) {
             record.preInsert();
-            return this.dao.insert(record);
+            return this.dao.insertSelective(record);
         } else {
             record.preUpdate();
             return this.dao.updateByPrimaryKeySelective(record);

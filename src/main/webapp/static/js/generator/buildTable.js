@@ -2,7 +2,21 @@ var form;
 $(document).ready(function () {
 
     form = $("#conditions").kendoMEForm({
-        enableValidate: true
+        enableValidate: true,
+        save: function () {
+            console.log(form.getData());
+            var data = form.getData();
+            $.ajax({
+                url: ctx + "/table/save",
+                data: data,
+                // contentType: "application/json;charset=UTF-8",
+                dataType: "json",
+                type: "post",
+                success: function (data) {
+                    alert(data.message)
+                }
+            })
+        }
     }).data("kendoMEForm");
 
     var dataSource = $("#dataSourceId").kendoDropDownList({
@@ -20,21 +34,21 @@ $(document).ready(function () {
             }
         },
         change: function () {
-            tableName.dataSource.read({carrier: carrier.value()});
+            tableName.dataSource.read({dataSourceId: dataSource.value()});
             tableName.select(0);
         }
     }).data("kendoDropDownList");
 
-    var tableName = $("#tableName").kendoDropDownList({
+    var tableName = $("#name").kendoDropDownList({
         autoBind: false,
         optionLabel: "请选择...",
         filter: "contains",
-        dataTextField: "repairCompany",
-        dataValueField: "repairCompany",
+        dataTextField: "name",
+        dataValueField: "name",
         valuePrimitive: true,
         dataSource: {
             transport: {
-                read: ctx + "/dataSource/findTables",
+                read: ctx + "/table/getTales",
                 // contentType: "application/json",
                 dataType: "json"
             }

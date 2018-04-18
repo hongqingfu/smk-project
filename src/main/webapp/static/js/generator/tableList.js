@@ -52,14 +52,66 @@ $(document).ready(function () {
         sortable: true,
         height: document.documentElement.clientHeight - (70 + $("#conditions").height()),
         toolbar: [{template: '<a class="k-button k-button-icontext" onclick="return form.data.add()"><span class="k-icon k-i-plus"></span>新增</a>'}],
+        // toolbar: [{name: "create", text: "新增"}],
         columns: [
             {
                 field: "comments",
                 title: "功能描述"
             },
+            // {
+            //     field: "dataSource",
+            //     title: "数据源",
+            //     editor: function (container, options) {
+            //         $('<input required name="' + options.field + '"/>')
+            //             .appendTo(container)
+            //             .kendoDropDownList({
+            //                 optionLabel: "请选择...",
+            //                 autoBind: false,
+            //                 filter: "contains",
+            //                 dataTextField: "databaseName",
+            //                 dataValueField: "id",
+            //                 valuePrimitive: true,
+            //                 dataSource: {
+            //                     transport: {
+            //                         read: ctx + "/dataSource/findList",
+            //                         // contentType: "application/json",
+            //                         dataType: "json"
+            //                     }
+            //                 },
+            //                 change: function (e) {
+            //                     // tableName.dataSource.read({dataSourceId: dataSource.value()});
+            //                     // tableName.select(0);
+            //                     console.log($("input[name='name']"))
+            //                     var tr = $(e.target).closest("tr");
+            //                     console.log($(this.element).closest("tr"))
+            //                     // $("input[name='name']").data("kendoDropDownList").dataSource.read({dataSourceId: dataSource.value()});
+            //                     // $("input[name='name']").data("kendoDropDownList").select(0);
+            //                 }
+            //             });
+            //     }
+            // },
             {
                 field: "name",
-                title: "表名"
+                title: "表名",
+                // editor: function (container, options) {
+                //     $('<input required name="' + options.field + '"/>')
+                //         .appendTo(container)
+                //         .kendoDropDownList({
+                //             autoBind: false,
+                //             optionLabel: "请选择...",
+                //             filter: "contains",
+                //             dataTextField: "name",
+                //             dataValueField: "name",
+                //             valuePrimitive: true,
+                //             dataSource: {
+                //                 transport: {
+                //                     read: ctx + "/table/getTales",
+                //                     // contentType: "application/json",
+                //                     dataType: "json"
+                //                 }
+                //             }
+                //         });
+                // }
             },
             {
                 field: "className",

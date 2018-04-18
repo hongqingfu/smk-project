@@ -19,6 +19,39 @@ public class GenDataSource extends BaseEntity {
     private String password;
 
 
+    public String getDiverName(){
+        String diverName = null;
+
+        if("mysql".equals(this.databaseType)){
+            diverName = "com.mysql.jdbc.Driver";
+        }
+        else if("oracle".equals(this.databaseType)){
+            diverName = "oracle.jdbc.driver.OracleDriver";
+        }
+        else if("sqlserver".equals(this.databaseType)){
+            diverName = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        }
+
+        return diverName;
+    }
+
+    public String getUrl(){
+        String url = null;
+
+        if("mysql".equals(this.databaseType)){
+            url = "jdbc:mysql://"+ this.server +":"+ this.port +"/"
+                    + this.databaseName +"?useUnicode=true&characterEncoding=UTF-8";
+        }
+        else if("oracle".equals(this.databaseType)){
+            url = "jdbc:oracle:thin:@"+ this.server +":"+ this.port +":"+ this.databaseName;
+        }
+        else if("sqlserver".equals(this.databaseType)){
+            url = "jdbc:sqlserver://"+ this.server +":"+ this.port +";DatabaseName="+ this.databaseName;
+        }
+
+        return url;
+    }
+
     public String getDescription() {
         return description;
     }
