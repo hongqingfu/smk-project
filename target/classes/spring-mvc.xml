@@ -47,6 +47,16 @@
         </property>
     </bean>
 
+    <!-- 放在InternalResourceViewResolver的前面，优先找freemarker -->
+    <!--<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/views/templates"/>
+    </bean>
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="prefix" value=""/>
+        <property name="suffix" value=".ftl"/>
+        <property name="contentType" value="text/html; charset=UTF-8"/>
+    </bean>-->
+
     <!-- 定义跳转的文件的前后缀 ，视图模式配置-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!-- 这里的配置我的理解是自动给后面action的方法return的字符串加上前缀和后缀，变成一个 可用的url地址 -->
@@ -66,7 +76,7 @@
     </bean>
 
     <!--  配置静态资源，防止被springmvc过滤 -->
-    <mvc:resources location="/" mapping="/**/*.html"/>
+    <!--<mvc:resources location="/" mapping="/**/*.html"/>
     <mvc:resources location="/" mapping="/**/*.js"/>
     <mvc:resources location="/" mapping="/**/*.css"/>
     <mvc:resources location="/" mapping="/**/*.png"/>
@@ -76,7 +86,13 @@
     <mvc:resources location="/" mapping="/**/*.ttf"/>
     <mvc:resources location="/" mapping="/**/*.jpg"/>
     <mvc:resources location="/" mapping="/**/*.mp3"/>
-    <mvc:resources location="/" mapping="/**/*.mp4"/>
+    <mvc:resources location="/" mapping="/**/*.mp4"/>-->
+
+    <!-- 对静态资源文件的访问， 将无法mapping到Controller的path交给default servlet handler处理 -->
+    <mvc:default-servlet-handler />
+
+    <!-- 静态资源映射 -->
+    <mvc:resources mapping="/static/**" location="/static/" cache-period="31536000"/>
 
 
 </beans>

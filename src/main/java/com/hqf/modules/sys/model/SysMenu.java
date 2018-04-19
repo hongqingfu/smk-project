@@ -2,6 +2,8 @@ package com.hqf.modules.sys.model;
 
 import com.hqf.common.base.BaseEntity;
 
+import java.util.List;
+
 public class SysMenu extends BaseEntity {
 
     // 父级id
@@ -30,6 +32,8 @@ public class SysMenu extends BaseEntity {
 
     // 权限
     private String permission;
+
+    private List<SysMenu> menuList;
 
 
     public String getParentId() {
@@ -104,4 +108,11 @@ public class SysMenu extends BaseEntity {
         this.permission = permission == null ? null : permission.trim();
     }
 
+    public List<SysMenu> getMenuList() {
+        return menuList;
+    }
+
+    public void setMenuList(List<SysMenu> menuList) {
+        this.menuList = menuList;
+    }
 }

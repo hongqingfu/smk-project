@@ -228,59 +228,6 @@
         }
     });
 
-    var MEMenu = kendo.ui.Widget.extend({
-        init: function (element, options) {
-            var that = this;
-
-            kendo.ui.Widget.fn.init.call(this, element, options);
-            this.setMenu(element);
-        },
-        options: {
-            name: "MEMenu"
-        },
-        setMenu: function (element) {
-            var homogeneous = new kendo.data.HierarchicalDataSource({
-                transport: {
-                    read: {
-                        url: ctx + "/sys/menus",
-                        dataType: "json",
-                        type: "post"
-                    }
-                },
-                schema: {
-                    model: {
-                        id: "id",
-                        hasChildren: function (dataItem) {
-                            if (dataItem.hasChildren == 1) {
-                                return true;
-                            } else {
-                                return false;
-                            }
-                        }
-                    }
-                }
-            });
-            var m = $(element).kendoPanelBar({
-                dataSource: homogeneous,
-                loadOnDemand: false,
-                expandMode: "single",
-                dataTextField: "name",
-                template: function (dataItem) {
-                    if (!dataItem.item.hasChildren && dataItem.item.parentId != 0) {
-                        var href = window.location.origin + "/" + dataItem.item.href;
-                        var a = "<a href='" + href + "'>" + dataItem.item.name + "</a>";
-                        return a;
-                    } else {
-                        return dataItem.item.name;
-                    }
-                }
-            });
-
-            m.data("kendoPanelBar").select(function () {
-            })
-        }
-    });
-
     var MEForm = kendo.ui.Widget.extend({
         init: function (element, options) {
             var $element = $(element);
@@ -317,8 +264,8 @@
             return this.data.toJSON();
         },
         setData: function (data) {
-            for (items in data){
-                console.log("属性:"+items+"的值是 ("+ data[items] +")");
+            for (items in data) {
+                console.log("属性:" + items + "的值是 (" + data[items] + ")");
                 this.data.set(items, data[items]);
             }
         },
@@ -371,6 +318,161 @@
         openUrl: function (url) {
             this.refresh({url: url, iframe: true});
             this.open().center();
+        }
+    });
+
+    var MEMenu = kendo.ui.Widget.extend({
+        _uid: null,
+        _treeview: [],
+        _panelbar: null,
+        _v: null,
+
+        init: function (element, options) {
+            var that = this;
+
+            kendo.ui.Widget.fn.init.call(that, element, options);
+
+            var data = [
+                {
+                    id: 1,
+                    text: "Furniture", items: [
+                    {text: "Tables & Chairs"},
+                    {text: "Sofas"},
+                    {text: "Occasional Furniture"}
+                ],
+                    none: [{text: ""}]
+                },
+                {
+                    id: 2,
+                    text: "Decor", items: [
+                    {text: "Bed Linen"},
+                    {text: "Curtains & Blinds"},
+                    {text: "Carpets"}
+                ], none: [{text: ""}]
+                }
+            ];
+            var inlineDefault1 = new kendo.data.HierarchicalDataSource({
+                data: data,
+                schema: {
+                    model: {
+                        children: "none"
+                    }
+                }
+            });
+
+            $.get(ctx + "/sys/menus2", function (response) {
+                var menuList = response;
+                that.replaceChildren(menuList, "menuList");
+                for (var i = 0; i < menuList.length; i++) {
+                    menuList[i].none = [{text: ""}]
+                }
+                var inlineDefault = new kendo.data.HierarchicalDataSource({
+                    data: menuList,
+                    schema: {
+                        model: {
+                            id: "id",
+                            children: "none"
+                        }
+                    }
+                });
+
+                that._panelbar = $(element).kendoPanelBar({
+                    dataSource: inlineDefault,
+                    loadOnDemand: false,
+                    expandMode: "single"
+                }).data("kendoPanelBar");
+                for (var i = 0; i < menuList.length; i++) {
+                    var datas = menuList[i];
+                    if (datas.items) {
+                        var uid = that._panelbar.dataSource.get(datas.id).uid;
+                        var $li = $(element).find('[data-uid=' + uid + ']').find("li");
+                        var inline = new kendo.data.HierarchicalDataSource({
+                            data: datas.items,
+                            schema: {
+                                model: {
+                                    id: "id",
+                                    children: "items"
+                                }
+                            }
+                        });
+                        var $menutrees = $('<div></div>').appendTo($li).kendoTreeView({
+                            dataSource: inline,
+                            template: "<span class='glyphicon glyphicon-folder-open'></span>&nbsp;&nbsp;&nbsp;#= item.text #",
+                            loadOnDemand: false,
+                            select: function (e) {
+                                e.preventDefault();
+                                console.log("Selecting", e.sender.dataItem(e.node));
+                                var dataItem = e.sender.dataItem(e.node);
+                                var href = window.location.origin + "/" + dataItem.href;
+                                if ((e.sender.dataItem(e.node)).hasChildren) {
+                                    e.sender.toggle($(e.node));
+                                } else {
+                                    window.location.href = href;
+                                }
+                            }
+                        });
+
+
+                        var treeView = $menutrees.data('kendoTreeView');
+                        that._treeview.push({tree: treeView, panelId: uid});
+                        $menutrees.on('click', 'span.k-state-selected',
+                            function (e) {
+                                $(e.delegateTarget).children().children().data('kendoTreeView').expand($(this));
+                            });
+                    }
+                }
+                that._panelbar.collapse($('ul'), false);
+                that.bind("dataBound",that.skipToMenu);
+                that.trigger("dataBound");
+            }, "json")
+
+        },
+        options: {
+            name: "MEMenu"
+        },
+        replaceChildren: function (list, fieldname) {
+            for (var i = 0; i < list.length; i++) {
+                list[i].text = list[i].name;
+                if (typeof list[i].menuList == "object") {
+                    list[i].items = list[i].menuList;
+                    delete list[i].menuList;
+                    delete list[i].hasChildren;
+                    if (list[i].href) {
+                        var url = ctx + list[i].href;
+                        if (url.indexOf('?') > 0) {
+                            url = url + "&menuid=" + list[i].id;
+                        } else {
+                            url = url + "?menuid=" + list[i].id;
+                        }
+                        list[i].href = url;
+                    }
+                    if (list[i].items != null) {
+                        this.replaceChildren(list[i].items, fieldname);
+                    } else {
+                        list[i].items = "";
+                    }
+                }
+            }
+        },
+        skipToMenu: function () {
+            var menuId = getQueryString("menuid");
+            console.log(menuId);
+            if(menuId){
+                delete getQueryString("menuid");
+                // var urlparam = common.ToUrlParam(common.GetRequest());
+                // history.replaceState(null,"",window.location.pathname + urlparam );
+                for(var i = 0;i < this._treeview.length;i++){
+                    var target = this._treeview[i];
+                    var menuData = target.tree.dataSource.get(menuId);
+                    if(menuData != null){
+                        this._panelbar.expand($("[data-uid=" + target.panelId + "]"),false);
+                        var tree = target.tree;
+                        var $menu = tree.findByUid(tree.dataSource.get(menuId).uid);
+                        tree.expandTo(menuId);
+                        tree.select($menu);
+                    }
+                }
+            }
         }
     });
 

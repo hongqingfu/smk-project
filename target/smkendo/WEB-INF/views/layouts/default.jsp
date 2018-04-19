@@ -1,11 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ taglib prefix="sitemesh" uri="http://www.opensymphony.com/sitemesh/decorator" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-
-<c:set var="ctx" value="${pageContext.request.contextPath}"/>
-<c:set var="ctxStatic" value="${pageContext.request.contextPath}/static"/>
+<%@include file="/WEB-INF/views/include/taglib.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,32 +11,37 @@
     <meta http-equiv="Expires" content="0"/>
     <script type="text/javascript">var ctx = '${ctx}', ctxStatic = '${ctxStatic}';</script>
 
-    <link rel="stylesheet" type="text/css" href="${ctxStatic}/bootstrap/css/bootstrap-theme.css"/>
-    <link rel="stylesheet" type="text/css" href="${ctxStatic}/bootstrap/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="${ctxStatic}/kendo/kendo.common-bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctxStatic}/bootstrap/bootstrap-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctxStatic}/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctxStatic}/kendo/kendo.common.min.css"/>
     <link rel="stylesheet" type="text/css" href="${ctxStatic}/kendo/kendo.bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="${ctxStatic}/kendo/kendo.silver.min.css"/>
+    <link rel="stylesheet" type="text/css" href="${ctxStatic}/common/web_common.css"/>
+    <%--<link rel="stylesheet" type="text/css" href="${ctxStatic}/common/commons.css"/>--%>
+    <%--<link rel="stylesheet" type="text/css" href="${ctxStatic}/common/site.css"/>--%>
+    <%--<link rel="stylesheet" type="text/css" href="${ctxStatic}/kendo/kendo.silver.min.css"/>--%>
     <%--<link rel="stylesheet" type="text/css" href="${ctxStatic}/common/styles.css"/>--%>
 
     <script type="text/javascript" src="${ctxStatic}/jquery/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="${ctxStatic}/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="${ctxStatic}/bootstrap/bootstrap.min.js"></script>
     <script type="text/javascript" src="${ctxStatic}/kendo/kendo.all.min.js"></script>
     <script type="text/javascript" src="${ctxStatic}/kendo/kendo.culture.zh-CN.min.js"></script>
+    <script type="text/javascript" src="${ctxStatic}/common/web_common.js"></script>
+    <script type="text/javascript" src="${ctxStatic}/me/MEWidget.js"></script>
 
     <sitemesh:head/>
 </head>
 <body>
-<div id="header" class="navbar navbar-default" role="navigation" style="margin-bottom: 0px;">
-    <div class="container-fluid">
+<div id="header" class="navbar navbar-default" role="navigation" style="margin-bottom: 1px;">
+    <div class="container-fluid" style="background-color: #337ab7">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">SMK</a>
+            <a class="navbar-brand" href="#" style="color:#fff;">SMK</a>
         </div>
 
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
                 <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                     <%--<img class="nav-user-photo" src="assets/avatars/user.jpg"/>--%>
-                    <span class="user-info">
+                    <span class="user-info" style="color:#fff;">
 									<small>Welcome,</small>
 									Jason
 								</span>
@@ -68,7 +67,7 @@
             </div>
         </div>
         <div id="main-pane">
-            <div class="pane-content">
+            <div class="container-fluid">
                 <sitemesh:body/>
 
             </div>
@@ -81,7 +80,7 @@
     $(document).ready(function () {
         var horizontal = $("#horizontal").kendoSplitter({
             panes: [
-                {collapsible: true, size: "15%"},
+                {collapsible: true, max: "20%", size: "15%"},
                 {collapsible: false}
             ]
         }).data("kendoSplitter");
@@ -120,18 +119,20 @@
             }
         });
 
-        $("#menu-panelbar").kendoPanelBar({
-            dataSource: homogeneous,
-            template: function (dataItem) {
-                if (!dataItem.item.hasChildren) {
-                    return "<a href='"+ dataItem.item.href +"'>" + dataItem.item.name + "</a>"
-                } else {
-                    return dataItem.item.name
-                }
-            },
-            dataTextField: "name"
-        });
-
+//        $("#menu-panelbar").kendoPanelBar({
+//            dataSource: homogeneous,
+//            template: function (dataItem) {
+//                if (!dataItem.item.hasChildren) {
+//                    var href = window.location.origin + "/" + dataItem.item.href;
+//                    var a = "<a href='" + href +"'>" + dataItem.item.name + "</a>";
+//                    return a;
+//                } else {
+//                    return dataItem.item.name
+//                }
+//            },
+//            dataTextField: "name"
+//        });
+        $("#menu-panelbar").kendoMEMenu();
     });
 </script>
 </body>

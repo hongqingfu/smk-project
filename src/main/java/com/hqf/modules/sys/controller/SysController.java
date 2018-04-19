@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -66,7 +67,9 @@ public class SysController {
     @RequestMapping("menus2")
     @ResponseBody
     public List<SysMenu> menuList2(SysMenu sysMenu) {
-        return sysMenuService.findList(sysMenu);
+        List<SysMenu> list = sysMenuService.findList(sysMenu);
+        List<SysMenu> list1 = buildByRecursive(list);
+        return list1;
     }
 
     @RequestMapping(value = "saveMenu", method = RequestMethod.POST)
@@ -109,6 +112,29 @@ public class SysController {
     @ResponseBody
     public PageInfo<SysUser> findUserByPage(SysUser sysUser) {
         return sysUserService.findPage(sysUser);
+    }
+
+    public List<SysMenu> buildByRecursive(List<SysMenu> sysMenuList) {
+        List<SysMenu> list = new ArrayList<>();
+        for (int i = 0; i < sysMenuList.size(); i++) {
+            SysMenu sysMenu = sysMenuList.get(i);
+            if ("0".equals(sysMenu.getParentId())) {
+                list.add(findChildren(sysMenu,sysMenuList));
+            }
+        }
+        return list;
+    }
+
+    public SysMenu findChildren(SysMenu sysMenu,List<SysMenu> sysMenuList) {
+        for (SysMenu it : sysMenuList) {
+            if (sysMenu.getId().equals(it.getParentId())){
+                if (sysMenu.getMenuList() == null) {
+                    sysMenu.setMenuList(new ArrayList<SysMenu>());
+                }
+                sysMenu.getMenuList().add(findChildren(it,sysMenuList));
+            }
+        }
+        return sysMenu;
     }
 
 }
