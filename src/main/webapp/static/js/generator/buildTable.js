@@ -4,18 +4,20 @@ $(document).ready(function () {
     form = $("#conditions").kendoMEForm({
         enableValidate: true,
         save: function () {
-            console.log(form.getData());
-            var data = form.getData();
-            $.ajax({
-                url: ctx + "/table/save",
-                data: data,
-                // contentType: "application/json;charset=UTF-8",
-                dataType: "json",
-                type: "post",
-                success: function (data) {
-                    alert(data.message)
-                }
-            })
+            if (form.validate()) {
+                console.log(form.getData());
+                var data = form.getData();
+                $.ajax({
+                    url: ctx + "/table/save",
+                    data: data,
+                    // contentType: "application/json;charset=UTF-8",
+                    dataType: "json",
+                    type: "post",
+                    success: function (data) {
+                        alert(data.message)
+                    }
+                })
+            }
         }
     }).data("kendoMEForm");
 

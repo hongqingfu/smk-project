@@ -379,7 +379,7 @@
                 that._panelbar = $(element).kendoPanelBar({
                     dataSource: inlineDefault,
                     loadOnDemand: false,
-                    expandMode: "single"
+                    // expandMode: "single"
                 }).data("kendoPanelBar");
                 for (var i = 0; i < menuList.length; i++) {
                     var datas = menuList[i];

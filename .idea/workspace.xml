@@ -9,54 +9,19 @@
     <list id="4a2f6c16-f945-4ad9-823c-458df92ffdb4" name="other" comment="其他文件">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
     </list>
-    <list default="true" id="fb4c8e29-2ff5-4fd7-a94f-dbbca3d343b6" name="Default" comment="用户管理">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_9.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/hqf/sys/base/BaseEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/hqf/sys/controller/SysController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/hqf/sys/dao/SysMenuMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/hqf/sys/dao/SysUserMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/hqf/sys/model/SysMenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/hqf/sys/model/SysUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/hqf/sys/service/SysMenuService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/hqf/sys/service/impl/SysMenuServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mapper/sys/SysMenuMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/mapper/sys/SysUserMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/com/hqf/sys/base/BaseEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/com/hqf/sys/controller/SysController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/com/hqf/sys/dao/SysMenuMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/com/hqf/sys/dao/SysUserMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/com/hqf/sys/model/SysMenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/com/hqf/sys/model/SysUser.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/com/hqf/sys/service/SysMenuService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/com/hqf/sys/service/impl/SysMenuServiceImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/mapper/sys/SysMenuMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/mapper/sys/SysUserMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/bootstrap/js/npm.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/smkendo_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/smkendo_war_exploded.xml" />
+    <list default="true" id="fb4c8e29-2ff5-4fd7-a94f-dbbca3d343b6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/generator/tableForm.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/mapper/sys/SysUserMapper.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/me/DataGrid.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/smkendo/static/me/DataGrid.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hqf/modules/sys/controller/SysController.java" afterPath="$PROJECT_DIR$/src/main/java/com/hqf/modules/sys/controller/SysController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hqf/modules/sys/model/SysMenu.java" afterPath="$PROJECT_DIR$/src/main/java/com/hqf/modules/sys/model/SysMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/controller/GenTableController.java" afterPath="$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/controller/GenTableController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/buildTable.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/buildTable.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableForm.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/common/web_common.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/common/web_common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/generator/buildTable.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/generator/buildTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/js/generator/tableList.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/generator/tableList.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/me/MEWidget.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/me/MEWidget.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/generatorConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/log4j.properties" afterPath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/spring-mvc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/spring-mybatis.xml" afterPath="$PROJECT_DIR$/target/smkendo/WEB-INF/classes/spring-mybatis.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/decorators.xml" afterPath="$PROJECT_DIR$/target/smkendo/WEB-INF/decorators.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smkendo/WEB-INF/views/layouts/default.jsp" afterPath="$PROJECT_DIR$/target/smkendo/WEB-INF/views/layouts/default.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smkendo/static/common/web_common.js" afterPath="$PROJECT_DIR$/target/smkendo/static/common/web_common.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/smkendo/static/me/MEWidget.js" afterPath="$PROJECT_DIR$/target/smkendo/static/me/MEWidget.js" />
     </list>
@@ -84,74 +49,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="MEWidget.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/me/MEWidget.js">
+      <file leaf-file-name="GenTableController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/controller/GenTableController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="460" column="46" lean-forward="false" selection-start-line="460" selection-start-column="46" selection-end-line="460" selection-end-column="46" />
+            <state relative-caret-position="156">
+              <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tableList.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableList.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="6" column="75" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tableList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/generator/tableList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="364">
+              <caret line="26" column="79" lean-forward="false" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tableForm.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableForm.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding>
-                <element signature="e#162#8246#0" expanded="false" />
-                <element signature="e#10054#11306#0" expanded="false" />
-                <marker date="1524125610107" expanded="true" signature="14236:14242" ph="&amp;nbsp;" />
-                <marker date="1524125610107" expanded="true" signature="14242:14248" ph="&amp;nbsp;" />
-                <marker date="1524125610107" expanded="true" signature="14248:14254" ph="&amp;nbsp;" />
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web_common.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/common/web_common.js">
+      <file leaf-file-name="tableForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/generator/tableForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="37" />
+            <state relative-caret-position="416">
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SysMenuMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/sys/mappings/SysMenuMapper.java">
+      <file leaf-file-name="GenTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/model/GenTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysMenuMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mappings/modules/sys/SysMenuMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5850">
-              <caret line="225" column="21" lean-forward="false" selection-start-line="225" selection-start-column="21" selection-end-line="225" selection-end-column="21" />
-              <folding>
-                <marker date="1524042335904" expanded="true" signature="1768:1882" ph="select from sys_menu" />
-                <marker date="1524042335904" expanded="true" signature="1971:2029" ph="delete from " />
-                <marker date="1524042335904" expanded="true" signature="2121:2827" ph="insert into sys_menu... " />
-                <marker date="1524042335904" expanded="true" signature="6191:7981" ph="update sys_m... " />
-                <marker date="1524042335904" expanded="true" signature="8087:8823" ph="update sys_m... " />
-                <marker date="1524042335904" expanded="true" signature="8954:9294" ph="select from sys_menu" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SysController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/sys/controller/SysController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="71" column="20" lean-forward="false" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/default.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="747">
-              <caret line="134" column="39" lean-forward="false" selection-start-line="134" selection-start-column="39" selection-end-line="134" selection-end-column="39" />
+            <state relative-caret-position="156">
+              <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -171,7 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>that.element.validate</find>
       <find>selectSelective</find>
       <find>title</find>
       <find>add</find>
@@ -201,6 +154,7 @@
       <find>body</find>
       <find>k-panelbar</find>
       <find>MEMenu</find>
+      <find>alertx</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -217,8 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/static/bootstrap/bootstrap.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/bootstrap/fonts/bootstrap.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sys/sysUserFrom.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hqf/sys/model/Test.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/menuList.js" />
@@ -243,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/mappings/modules/generator/GenTableMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/generator/tableFrom.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/generator/tableForm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableList.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/controller/GenDataSourceController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/bootstrap/bootstrap.min.css" />
@@ -254,10 +205,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/util/CodePathUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/util/CodeGenerateUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hqf/common/base/BaseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/controller/GenTableController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/generator/buildTable.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/js/generator/tableList.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/buildTable.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/static/common/web_common.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/blank.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/sys/sysUserList.jsp" />
@@ -266,8 +213,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hqf/TreeBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hqf/modules/sys/model/SysMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/hqf/modules/sys/controller/SysController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/static/me/MEWidget.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/default.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/generator/buildTable.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/buildTable.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/common/web_common.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/me/MEWidget.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/generator/tableList.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/static/js/generator/tableForm.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/controller/GenTableController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableForm.jsp" />
       </list>
     </option>
   </component>
@@ -399,6 +353,36 @@
               <item name="smkendo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hqf" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smkendo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smkendo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hqf" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smkendo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smkendo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hqf" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smkendo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smkendo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -416,7 +400,54 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smkendo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smkendo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smkendo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smkendo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smkendo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smkendo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smkendo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smkendo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smkendo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smkendo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -434,19 +465,19 @@
     <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\webapp\static\bootstrap" />
-      <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\java\com\hqf\modules\generator" />
-      <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\webapp\static" />
-      <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\webapp\static\js\generator" />
+      <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\resources\mapper\sys" />
       <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\webapp\static\common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.hqf.modules.generator.controller" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\webapp\static\js\generator" />
       <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\webapp\static\bootstrap" />
-      <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\resources\mapper\sys" />
+      <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\java\com\hqf\modules\generator" />
+      <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\webapp\static" />
       <recent name="D:\Users\hongqingfu\IdeaProjects\smkendo\src\main\webapp\static\common" />
     </key>
   </component>
@@ -663,7 +694,7 @@
       <workItem from="1524021494517" duration="13545000" />
       <workItem from="1524097491132" duration="7059000" />
       <workItem from="1524109460882" duration="1790000" />
-      <workItem from="1524123140087" duration="2626000" />
+      <workItem from="1524123140087" duration="6653000" />
     </task>
     <task id="LOCAL-00001" summary="添加公共dao、service，参考sysmenu模块">
       <created>1522076386750</created>
@@ -749,11 +780,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524021595103</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="修改菜单控件">
+      <created>1524125795611</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1524125795612</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174861000" />
+    <option name="totallyTimeSpent" value="178888000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -779,14 +817,14 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27719298" sideWeight="0.49356222" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27719298" sideWeight="0.49356222" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14502925" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14502925" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -865,7 +903,8 @@
     <MESSAGE value="分页拦截器" />
     <MESSAGE value="优化" />
     <MESSAGE value="用户管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户管理" />
+    <MESSAGE value="修改菜单控件" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改菜单控件" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -882,13 +921,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/service/GenTableService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="61" lean-forward="false" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/service/impl/GenDataSourceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -925,13 +957,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/generator/tableForm.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableForm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="71" column="6" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="71" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/sysUserForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -1008,13 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="9" column="19" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/generator/dataSourceList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1037,45 +1055,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/generator/tableList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/generator/buildTable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="54" column="9" lean-forward="false" selection-start-line="42" selection-start-column="8" selection-end-line="54" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/model/GenTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/buildTable.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/util/ReadTableUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/controller/GenTableController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1106,13 +1089,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="33" column="30" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="33" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/me/DataGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-546">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1173,33 +1149,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/default.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="877">
+          <caret line="133" column="13" lean-forward="true" selection-start-line="133" selection-start-column="13" selection-end-line="133" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/me/DataGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="116" column="8" lean-forward="false" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/generator/buildTable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-293">
+          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/common/web_common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="37" />
+        <state relative-caret-position="447">
+          <caret line="222" column="17" lean-forward="false" selection-start-line="222" selection-start-column="12" selection-end-line="222" selection-end-column="17" />
+          <folding>
+            <marker date="1524126752810" expanded="true" signature="6318:6335" ph="..." />
+            <marker date="1524126752810" expanded="true" signature="6894:6911" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="75" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/me/MEWidget.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="460" column="46" lean-forward="false" selection-start-line="460" selection-start-column="46" selection-end-line="460" selection-end-column="46" />
+        <state relative-caret-position="173">
+          <caret line="389" column="37" lean-forward="true" selection-start-line="389" selection-start-column="37" selection-end-line="389" selection-end-column="37" />
           <folding>
             <element signature="e#162#8246#0" expanded="false" />
             <element signature="e#10054#11306#0" expanded="false" />
-            <marker date="1524125610107" expanded="true" signature="14236:14242" ph="&amp;nbsp;" />
-            <marker date="1524125610107" expanded="true" signature="14242:14248" ph="&amp;nbsp;" />
-            <marker date="1524125610107" expanded="true" signature="14248:14254" ph="&amp;nbsp;" />
+            <marker date="1524128619766" expanded="true" signature="14239:14245" ph="&amp;nbsp;" />
+            <marker date="1524128619766" expanded="true" signature="14245:14251" ph="&amp;nbsp;" />
+            <marker date="1524128619766" expanded="true" signature="14251:14257" ph="&amp;nbsp;" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/layouts/default.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/buildTable.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="134" column="39" lean-forward="false" selection-start-line="134" selection-start-column="39" selection-end-line="134" selection-end-column="39" />
+        <state relative-caret-position="521">
+          <caret line="29" column="109" lean-forward="false" selection-start-line="29" selection-start-column="109" selection-end-line="29" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#button#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/model/GenTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/generator/tableForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/hqf/modules/generator/controller/GenTableController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/generator/tableList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="26" column="79" lean-forward="false" selection-start-line="26" selection-start-column="79" selection-end-line="26" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/generator/tableForm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

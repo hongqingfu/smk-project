@@ -31,11 +31,22 @@ public class GenTableController {
         return "generator/tableList";
     }
 
-    @RequestMapping("/bulidTable")
+    @RequestMapping("/form")
     public String form() {
+        return "generator/tableForm";
+    }
+
+    @RequestMapping("/bulidTable")
+    public String bulidTable() {
         return "generator/buildTable";
     }
 
+    @RequestMapping("/get")
+    @ResponseBody
+    public GenTable get(String id) {
+        GenTable genTable = genTableService.get(id);
+        return genTable;
+    }
     @RequestMapping("findPage")
     @ResponseBody
     public PageInfo<GenTable> findPage(GenTable genTable) {
@@ -50,6 +61,16 @@ public class GenTableController {
             return new BaseMessage(200, "保存成功");
         }
         return new BaseMessage(500, "保存失败");
+    }
+
+    @RequestMapping("delete")
+    @ResponseBody
+    public BaseMessage delete(String id) {
+        int count = genTableService.delete(id);
+        if (count > 0) {
+            return new BaseMessage(200, "删除成功");
+        }
+        return new BaseMessage(500, "删除失败");
     }
 
     @RequestMapping("getTales")
@@ -71,5 +92,6 @@ public class GenTableController {
         }
         return list;
     }
+
 
 }

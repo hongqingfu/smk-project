@@ -205,3 +205,47 @@ Array.prototype.remove = function (val) {
         this.splice(index, 1);
     }
 };
+
+//自定义alert
+function alertx(mess, closed) {
+    $("<div style='text-align:center'></div>")
+        .appendTo("body")
+        .kendoDialog({
+            width: "200px",
+            modal: true,
+            title: "提示",
+            visible: false,
+            closable: false,
+            content: mess ? mess : "",
+            actions: [
+                {text: '确定', primary: true}
+            ],
+            close: function () {
+                if (typeof closed == 'function') {
+                    closed();
+                }
+            }
+        }).data("kendoDialog").open();
+}
+
+function confirmx(mess, actionOK) {
+    $("<div style='text-align:center'></div>")
+        .appendTo("body")
+        .kendoDialog({
+            width: "200px",
+            modal: true,
+            title: "提示",
+            visible: false,
+            closable: false,
+            content: mess ? mess : "",
+            actions: [
+                {
+                    text: '确定', primary: true, action: typeof actionOK == 'function' ? actionOK : function () {
+                    alertx("函数不正确")
+                }
+                },
+                {text: '取消'}
+            ]
+        }).data("kendoDialog").open();
+}
+

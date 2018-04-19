@@ -1,32 +1,23 @@
 var form;
 $(document).ready(function () {
-
+    var id = getQueryString("id");
     form = $("#conditions").kendoMEForm({
-        enableValidate: true,
-        query: function () {
-            grid.dataSource.read(form.getData())
-        },
-        clear: function () {
-            form.clear();
-        },
-        add: function () {
-            $window.data("kendoMEWindow").openUrl(ctx + "/table/bulidTable");
-        },
-        del: function (id) {
-            confirmx("确认删除?", function () {
-               $.get(ctx + "/table/delete?id=" + id, function (data) {
-                   if (data.code == 200) {
-                       alertx(data.message,function () {
-                           grid.dataSource.read();
-                       });
-                   }
-               })
-            })
-        },
-        build: function (id) {
-            $window.data("kendoMEWindow").openUrl(ctx + "/table/form?id=" + id);
-        }
+        enableValidate: true
     }).data("kendoMEForm");
+
+    // 加载数据
+    $.ajax({
+        url: ctx + "/table/get?id=" + id,
+        type: "post",
+        dataType: "json",
+        success: function (data) {
+            if (data) {
+                form.setData(data)
+            } else {
+                alertx("no data")
+            }
+        }
+    });
 
     var $window = $("<div id='detail_window'></div>").appendTo($(document.body)).kendoMEWindow();
 
@@ -64,7 +55,7 @@ $(document).ready(function () {
             {
                 command: [
                     {
-                        name: "edit", text: "配置",iconClass: "k-icon k-i-edit",
+                        name: "edit", text: "配置", iconClass: "k-icon k-i-edit",
                         click: function (e) {
                             e.preventDefault();
                             var tr = $(e.target).closest("tr");
@@ -73,7 +64,7 @@ $(document).ready(function () {
                         }
                     },
                     {
-                        name: "build", text: "生成代码",iconClass: "k-icon k-i-hyperlink-open",
+                        name: "build", text: "生成代码", iconClass: "k-icon k-i-hyperlink-open",
                         click: function (e) {
                             e.preventDefault();
                             var tr = $(e.target).closest("tr");
@@ -82,7 +73,7 @@ $(document).ready(function () {
                         }
                     },
                     {
-                        name: "del", text: "删除",iconClass: "k-icon k-i-delete",
+                        name: "del", text: "删除", iconClass: "k-icon k-i-delete",
                         click: function (e) {
                             e.preventDefault();
                             var tr = $(e.target).closest("tr");

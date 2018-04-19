@@ -23,11 +23,15 @@
             <div class="form-group">
                 <label class="col-md-2 control-label">数据源</label>
                 <div class="col-md-4">
-                    <input id="dataSourceId" name="name" class="input-sm form-control" data-bind="value:dataSourceId" style="width: 100%" required/>
+                    <input id="dataSourceId" name="dataSourceId" class="input-sm form-control" data-bind="value:dataSourceId" style="width: 100%" required/>
                 </div>
                 <label class="col-md-2 control-label">表名</label>
                 <div class="col-md-4">
                     <input id="name" name="name" class="input-sm form-control" data-bind="value:name" style="width: 100%" required/>
+                </div>
+                <label class="col-md-2 control-label">类名</label>
+                <div class="col-md-4">
+                    <input id="className" name="className" class="input-sm form-control" data-bind="value:className" style="width: 100%" required/>
                 </div>
                 <label class="col-md-2 control-label">描述</label>
                 <div class="col-md-4">
