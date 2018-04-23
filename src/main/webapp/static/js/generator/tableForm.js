@@ -25,7 +25,7 @@ $(document).ready(function () {
         dataSource: {
             transport: {
                 read: {
-                    url: ctx + "/table/findPage",
+                    url: ctx + "/table/getTC?tableName=",
                     type: "post"
                 }
             },
@@ -38,19 +38,55 @@ $(document).ready(function () {
         },
         sortable: true,
         height: document.documentElement.clientHeight - (70 + $("#conditions").height()),
-        toolbar: [{template: '<a class="k-button k-button-icontext" onclick="return form.data.add()"><span class="k-icon k-i-plus"></span>新增</a>'}],
+        // toolbar: [{template: '<a class="k-button k-button-icontext" onclick="return form.data.add()"><span class="k-icon k-i-plus"></span>新增</a>'}],
         columns: [
             {
-                field: "comments",
-                title: "功能描述"
-            },
-            {
                 field: "name",
-                title: "表名"
+                title: "列名"
             },
             {
-                field: "className",
-                title: "类名"
+                field: "comments",
+                title: "说明"
+            },
+            {
+                field: "jdbcType",
+                title: "物理类型"
+            },{
+                field: "javaType",
+                title: "Java类型"
+            },{
+                field: "javaField",
+                title: "Java属性名称"
+            },{
+                field: "isPk",
+                title: "主键"
+            },{
+                field: "isNull",
+                title: "可空"
+            },{
+                field: "isInsert",
+                title: "插入"
+            },{
+                field: "isEdit",
+                title: "编辑"
+            },{
+                field: "isList",
+                title: "列表"
+            },{
+                field: "isQuery",
+                title: "查询"
+            },{
+                field: "queryType",
+                title: "查询匹配方式"
+            },{
+                field: "showType",
+                title: "显示表单类型"
+            },{
+                field: "dictType",
+                title: "字典类型"
+            },{
+                field: "sort",
+                title: "排序"
             },
             {
                 command: [
@@ -85,7 +121,8 @@ $(document).ready(function () {
                 title: "操作",
                 width: "260px"
             }
-        ]
+        ],
+        editable: true
     }).data("kendoMEGrid");
 });
 

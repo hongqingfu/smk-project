@@ -4,12 +4,13 @@ import com.github.pagehelper.PageInfo;
 import com.hqf.common.base.BaseMessage;
 import com.hqf.modules.generator.model.GenDataSource;
 import com.hqf.modules.generator.model.GenTable;
+import com.hqf.modules.generator.model.GenTableColumn;
 import com.hqf.modules.generator.service.GenDataSourceService;
+import com.hqf.modules.generator.service.GenTableColumnService;
 import com.hqf.modules.generator.service.GenTableService;
 import com.hqf.modules.generator.util.ReadTableUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -25,6 +26,9 @@ public class GenTableController {
 
     @Autowired
     private GenDataSourceService genDataSourceService;
+
+    @Autowired
+    private GenTableColumnService genTableColumnService;
 
     @RequestMapping("/list")
     public String list() {
@@ -47,6 +51,7 @@ public class GenTableController {
         GenTable genTable = genTableService.get(id);
         return genTable;
     }
+
     @RequestMapping("findPage")
     @ResponseBody
     public PageInfo<GenTable> findPage(GenTable genTable) {
@@ -93,5 +98,17 @@ public class GenTableController {
         return list;
     }
 
+    @RequestMapping("getTC")
+    @ResponseBody
+    public List<GenTableColumn> getTableColumn(String tableName, String tableSchema){
+        if ("".equals(tableName)) {
+            tableName = "sys_role";
+        }
+        if ("".equals(tableSchema)) {
+            tableSchema = "smkdb";
+        }
+        List<GenTableColumn> genTableColumns = genTableColumnService.selectColumn(tableName, tableSchema);
+        return genTableColumns;
+    }
 
 }

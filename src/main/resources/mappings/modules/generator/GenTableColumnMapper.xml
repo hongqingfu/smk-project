@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hqf.modules.generator.mappings.GenTableColumnMapper">
+    <resultMap id="BaseResultMap" type="com.hqf.modules.generator.model.GenTableColumn">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="gen_table_id" property="genTableId" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="comments" property="comments" jdbcType="VARCHAR"/>
+        <result column="jdbc_type" property="jdbcType" jdbcType="VARCHAR"/>
+        <result column="java_type" property="javaType" jdbcType="VARCHAR"/>
+        <result column="java_field" property="javaField" jdbcType="VARCHAR"/>
+        <result column="is_pk" property="isPk" jdbcType="CHAR"/>
+        <result column="is_null" property="isNull" jdbcType="CHAR"/>
+        <result column="is_insert" property="isInsert" jdbcType="CHAR"/>
+        <result column="is_edit" property="isEdit" jdbcType="CHAR"/>
+        <result column="is_list" property="isList" jdbcType="CHAR"/>
+        <result column="is_query" property="isQuery" jdbcType="CHAR"/>
+        <result column="query_type" property="queryType" jdbcType="VARCHAR"/>
+        <result column="show_type" property="showType" jdbcType="VARCHAR"/>
+        <result column="dict_type" property="dictType" jdbcType="VARCHAR"/>
+        <result column="settings" property="settings" jdbcType="VARCHAR"/>
+        <result column="sort" property="sort" jdbcType="DECIMAL"/>
+        <result column="create_by" property="createBy" jdbcType="VARCHAR"/>
+        <result column="create_date" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="update_by" property="updateBy" jdbcType="VARCHAR"/>
+        <result column="update_date" property="updateDate" jdbcType="TIMESTAMP"/>
+        <result column="remarks" property="remarks" jdbcType="VARCHAR"/>
+        <result column="del_flag" property="delFlag" jdbcType="CHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, gen_table_id, name, comments, jdbc_type, java_type, java_field, is_pk, is_null, 
+    is_insert, is_edit, is_list, is_query, query_type, show_type, dict_type, settings, 
+    sort, create_by, create_date, update_by, update_date, remarks, del_flag
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select 'true' as QUERYID,
+        <include refid="Base_Column_List"/>
+        from gen_table_column
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from gen_table_column
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+    <insert id="insert" parameterType="com.hqf.modules.generator.model.GenTableColumn">
+    insert into gen_table_column (id, gen_table_id, name, 
+      comments, jdbc_type, java_type, 
+      java_field, is_pk, is_null, 
+      is_insert, is_edit, is_list, is_query, 
+      query_type, show_type, dict_type, 
+      settings, sort, create_by, 
+      create_date, update_by, update_date, 
+      remarks, del_flag)
+    values (#{id,jdbcType=VARCHAR}, #{genTableId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{comments,jdbcType=VARCHAR}, #{jdbcType,jdbcType=VARCHAR}, #{javaType,jdbcType=VARCHAR}, 
+      #{javaField,jdbcType=VARCHAR}, #{isPk,jdbcType=CHAR}, #{isNull,jdbcType=CHAR}, 
+      #{isInsert,jdbcType=CHAR}, #{isEdit,jdbcType=CHAR}, #{isList,jdbcType=CHAR}, #{isQuery,jdbcType=CHAR}, 
+      #{queryType,jdbcType=VARCHAR}, #{showType,jdbcType=VARCHAR}, #{dictType,jdbcType=VARCHAR}, 
+      #{settings,jdbcType=VARCHAR}, #{sort,jdbcType=DECIMAL}, #{createBy,jdbcType=VARCHAR}, 
+      #{createDate,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIMESTAMP}, 
+      #{remarks,jdbcType=VARCHAR}, #{delFlag,jdbcType=CHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.hqf.modules.generator.model.GenTableColumn">
+        insert into gen_table_column
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="genTableId != null">
+                gen_table_id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="comments != null">
+                comments,
+            </if>
+            <if test="jdbcType != null">
+                jdbc_type,
+            </if>
+            <if test="javaType != null">
+                java_type,
+            </if>
+            <if test="javaField != null">
+                java_field,
+            </if>
+            <if test="isPk != null">
+                is_pk,
+            </if>
+            <if test="isNull != null">
+                is_null,
+            </if>
+            <if test="isInsert != null">
+                is_insert,
+            </if>
+            <if test="isEdit != null">
+                is_edit,
+            </if>
+            <if test="isList != null">
+                is_list,
+            </if>
+            <if test="isQuery != null">
+                is_query,
+            </if>
+            <if test="queryType != null">
+                query_type,
+            </if>
+            <if test="showType != null">
+                show_type,
+            </if>
+            <if test="dictType != null">
+                dict_type,
+            </if>
+            <if test="settings != null">
+                settings,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="createBy != null">
+                create_by,
+            </if>
+            <if test="createDate != null">
+                create_date,
+            </if>
+            <if test="updateBy != null">
+                update_by,
+            </if>
+            <if test="updateDate != null">
+                update_date,
+            </if>
+            <if test="remarks != null">
+                remarks,
+            </if>
+            <if test="delFlag != null">
+                del_flag,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="genTableId != null">
+                #{genTableId,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="comments != null">
+                #{comments,jdbcType=VARCHAR},
+            </if>
+            <if test="jdbcType != null">
+                #{jdbcType,jdbcType=VARCHAR},
+            </if>
+            <if test="javaType != null">
+                #{javaType,jdbcType=VARCHAR},
+            </if>
+            <if test="javaField != null">
+                #{javaField,jdbcType=VARCHAR},
+            </if>
+            <if test="isPk != null">
+                #{isPk,jdbcType=CHAR},
+            </if>
+            <if test="isNull != null">
+                #{isNull,jdbcType=CHAR},
+            </if>
+            <if test="isInsert != null">
+                #{isInsert,jdbcType=CHAR},
+            </if>
+            <if test="isEdit != null">
+                #{isEdit,jdbcType=CHAR},
+            </if>
+            <if test="isList != null">
+                #{isList,jdbcType=CHAR},
+            </if>
+            <if test="isQuery != null">
+                #{isQuery,jdbcType=CHAR},
+            </if>
+            <if test="queryType != null">
+                #{queryType,jdbcType=VARCHAR},
+            </if>
+            <if test="showType != null">
+                #{showType,jdbcType=VARCHAR},
+            </if>
+            <if test="dictType != null">
+                #{dictType,jdbcType=VARCHAR},
+            </if>
+            <if test="settings != null">
+                #{settings,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=DECIMAL},
+            </if>
+            <if test="createBy != null">
+                #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null">
+                #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null">
+                #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null">
+                #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null">
+                #{delFlag,jdbcType=CHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.hqf.modules.generator.model.GenTableColumn">
+        update gen_table_column
+        <set>
+            <if test="genTableId != null">
+                gen_table_id = #{genTableId,jdbcType=VARCHAR},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="comments != null">
+                comments = #{comments,jdbcType=VARCHAR},
+            </if>
+            <if test="jdbcType != null">
+                jdbc_type = #{jdbcType,jdbcType=VARCHAR},
+            </if>
+            <if test="javaType != null">
+                java_type = #{javaType,jdbcType=VARCHAR},
+            </if>
+            <if test="javaField != null">
+                java_field = #{javaField,jdbcType=VARCHAR},
+            </if>
+            <if test="isPk != null">
+                is_pk = #{isPk,jdbcType=CHAR},
+            </if>
+            <if test="isNull != null">
+                is_null = #{isNull,jdbcType=CHAR},
+            </if>
+            <if test="isInsert != null">
+                is_insert = #{isInsert,jdbcType=CHAR},
+            </if>
+            <if test="isEdit != null">
+                is_edit = #{isEdit,jdbcType=CHAR},
+            </if>
+            <if test="isList != null">
+                is_list = #{isList,jdbcType=CHAR},
+            </if>
+            <if test="isQuery != null">
+                is_query = #{isQuery,jdbcType=CHAR},
+            </if>
+            <if test="queryType != null">
+                query_type = #{queryType,jdbcType=VARCHAR},
+            </if>
+            <if test="showType != null">
+                show_type = #{showType,jdbcType=VARCHAR},
+            </if>
+            <if test="dictType != null">
+                dict_type = #{dictType,jdbcType=VARCHAR},
+            </if>
+            <if test="settings != null">
+                settings = #{settings,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=DECIMAL},
+            </if>
+            <if test="createBy != null">
+                create_by = #{createBy,jdbcType=VARCHAR},
+            </if>
+            <if test="createDate != null">
+                create_date = #{createDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateBy != null">
+                update_by = #{updateBy,jdbcType=VARCHAR},
+            </if>
+            <if test="updateDate != null">
+                update_date = #{updateDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="remarks != null">
+                remarks = #{remarks,jdbcType=VARCHAR},
+            </if>
+            <if test="delFlag != null">
+                del_flag = #{delFlag,jdbcType=CHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.hqf.modules.generator.model.GenTableColumn">
+    update gen_table_column
+    set gen_table_id = #{genTableId,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      comments = #{comments,jdbcType=VARCHAR},
+      jdbc_type = #{jdbcType,jdbcType=VARCHAR},
+      java_type = #{javaType,jdbcType=VARCHAR},
+      java_field = #{javaField,jdbcType=VARCHAR},
+      is_pk = #{isPk,jdbcType=CHAR},
+      is_null = #{isNull,jdbcType=CHAR},
+      is_insert = #{isInsert,jdbcType=CHAR},
+      is_edit = #{isEdit,jdbcType=CHAR},
+      is_list = #{isList,jdbcType=CHAR},
+      is_query = #{isQuery,jdbcType=CHAR},
+      query_type = #{queryType,jdbcType=VARCHAR},
+      show_type = #{showType,jdbcType=VARCHAR},
+      dict_type = #{dictType,jdbcType=VARCHAR},
+      settings = #{settings,jdbcType=VARCHAR},
+      sort = #{sort,jdbcType=DECIMAL},
+      create_by = #{createBy,jdbcType=VARCHAR},
+      create_date = #{createDate,jdbcType=TIMESTAMP},
+      update_by = #{updateBy,jdbcType=VARCHAR},
+      update_date = #{updateDate,jdbcType=TIMESTAMP},
+      remarks = #{remarks,jdbcType=VARCHAR},
+      del_flag = #{delFlag,jdbcType=CHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+    <select id="selectSelective" resultMap="BaseResultMap"
+            parameterType="com.hqf.modules.generator.model.GenTableColumn">
+        select 'true'
+        <include refid="Base_Column_List"/>
+        from gen_table_column
+        where 1=1
+        <if test="name != null and name != ''">
+            name = #{name,jdbcType=VARCHAR}
+        </if>
+    </select>
+</mapper>

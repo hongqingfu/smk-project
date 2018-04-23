@@ -41,7 +41,7 @@
 
         <!-- !!!! Table Configurations !!!! -->
         <!-- 数据表配置 -->
-        <table tableName="gen_table" domainObjectName="GenTable"
+        <table tableName="gen_table_column" domainObjectName="GenTableColumn"
                enableInsert="true"
                enableSelectByPrimaryKey="true"
                enableUpdateByPrimaryKey="true"
