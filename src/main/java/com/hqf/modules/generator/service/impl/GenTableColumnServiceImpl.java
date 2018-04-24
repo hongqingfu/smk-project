@@ -10,8 +10,9 @@ import java.util.List;
 
 @Service("genTableColumnService")
 public class GenTableColumnServiceImpl extends BaseServiceImpl<GenTableColumnMapper, GenTableColumn> implements GenTableColumnService {
+
     @Override
-    public List<GenTableColumn> selectColumn(String tableName, String tableSchema) {
-        return this.findList(new GenTableColumn());
+    public int deleteByTableId(String tableId) {
+        return this.deleteByTableId(tableId);
     }
 }

@@ -5,4 +5,5 @@ import com.hqf.modules.generator.model.GenTableColumn;
 
 public interface GenTableColumnMapper extends BaseDao<GenTableColumn> {
 
+    int deleteByTableId(String tableId);
 }

@@ -25,10 +25,16 @@
                     },
                     schema: {
                         data: function (response) {
-                            return response.list;
+                            if (response.list) {
+                                return response.list;
+                            }
+                            return response;
                         },
                         total: function (response) {
-                            return response.total;
+                            if (response.total) {
+                                return response.total;
+                            }
+                            return response;
                         }
                     }
                 },
@@ -265,7 +271,6 @@
         },
         setData: function (data) {
             for (items in data) {
-                console.log("属性:" + items + "的值是 (" + data[items] + ")");
                 this.data.set(items, data[items]);
             }
         },

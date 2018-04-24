@@ -60,10 +60,18 @@ public class GenTableController {
 
     @ResponseBody
     @RequestMapping("save")
-    public BaseMessage save(GenTable genTable) {
-        int count = genTableService.save(genTable);
-        if (count > 0) {
-            return new BaseMessage(200, "保存成功");
+    public BaseMessage save(GenTable genTable, String dataSourceId, String name) {
+        try {
+            GenDataSource dataSource = genDataSourceService.get(dataSourceId);
+            List<GenTableColumn> columns = new ReadTableUtils().readTableColumn(dataSource, name);
+            genTable.setColumns(columns);
+            int count = genTableService.saveTableAndColumn(genTable);
+            if (count > 0) {
+                return new BaseMessage(200, "保存成功");
+            }
+            return new BaseMessage(500, "保存失败");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         return new BaseMessage(500, "保存失败");
     }
@@ -71,7 +79,7 @@ public class GenTableController {
     @RequestMapping("delete")
     @ResponseBody
     public BaseMessage delete(String id) {
-        int count = genTableService.delete(id);
+        int count = genTableService.deleteTableAndColumn(id);
         if (count > 0) {
             return new BaseMessage(200, "删除成功");
         }
@@ -98,17 +106,19 @@ public class GenTableController {
         return list;
     }
 
-    @RequestMapping("getTC")
+    @RequestMapping("getColumns")
     @ResponseBody
-    public List<GenTableColumn> getTableColumn(String tableName, String tableSchema){
-        if ("".equals(tableName)) {
-            tableName = "sys_role";
+    public List<GenTableColumn> getTableColumn(GenTableColumn genTableColumn) {
+        List<GenTableColumn> list = genTableColumnService.findList(genTableColumn);
+        return list;
+    }
+
+    public BaseMessage deleteByTableId(String tableId) {
+        int count = genTableColumnService.deleteByTableId(tableId);
+        if (count > 0) {
+            return new BaseMessage(200, "删除成功");
         }
-        if ("".equals(tableSchema)) {
-            tableSchema = "smkdb";
-        }
-        List<GenTableColumn> genTableColumns = genTableColumnService.selectColumn(tableName, tableSchema);
-        return genTableColumns;
+        return new BaseMessage(500, "删除失败");
     }
 
 }

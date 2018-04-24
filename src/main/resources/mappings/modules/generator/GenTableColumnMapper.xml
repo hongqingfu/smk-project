@@ -315,12 +315,41 @@
   </update>
     <select id="selectSelective" resultMap="BaseResultMap"
             parameterType="com.hqf.modules.generator.model.GenTableColumn">
-        select 'true'
+        select
         <include refid="Base_Column_List"/>
         from gen_table_column
         where 1=1
         <if test="name != null and name != ''">
             name = #{name,jdbcType=VARCHAR}
         </if>
+        <if test="genTableId != null and genTableId != ''">
+            gen_table_id = #{genTableId,jdbcType=VARCHAR}
+        </if>
+        order by sort
     </select>
+    <insert id="insertBatch" parameterType="java.util.List">
+        insert into gen_table_column (id, gen_table_id, name,
+        comments, jdbc_type, java_type,
+        java_field, is_pk, is_null,
+        is_insert, is_edit, is_list, is_query,
+        query_type, show_type, dict_type,
+        settings, sort, create_by,
+        create_date, update_by, update_date,
+        remarks, del_flag)
+        values
+        <foreach collection ="list" item="item" index= "index" separator =",">
+            (#{item.id,jdbcType=VARCHAR}, #{item.genTableId,jdbcType=VARCHAR}, #{item.name,jdbcType=VARCHAR},
+            #{item.comments,jdbcType=VARCHAR}, #{item.jdbcType,jdbcType=VARCHAR}, #{item.javaType,jdbcType=VARCHAR},
+            #{item.javaField,jdbcType=VARCHAR}, #{item.isPk,jdbcType=CHAR}, #{item.isNull,jdbcType=CHAR},
+            #{item.isInsert,jdbcType=CHAR}, #{item.isEdit,jdbcType=CHAR}, #{item.isList,jdbcType=CHAR}, #{item.isQuery,jdbcType=CHAR},
+            #{item.queryType,jdbcType=VARCHAR}, #{item.showType,jdbcType=VARCHAR}, #{item.dictType,jdbcType=VARCHAR},
+            #{item.settings,jdbcType=VARCHAR}, #{item.sort,jdbcType=DECIMAL}, #{item.createBy,jdbcType=VARCHAR},
+            #{item.createDate,jdbcType=TIMESTAMP}, #{item.updateBy,jdbcType=VARCHAR}, #{item.updateDate,jdbcType=TIMESTAMP},
+            #{item.remarks,jdbcType=VARCHAR}, #{item.delFlag,jdbcType=CHAR})
+        </foreach>
+    </insert>
+    <delete id="deleteByTableId" parameterType="string">
+        delete from gen_table_column
+        where gen_table_id = #{genTableId,jdbcType=VARCHAR}
+    </delete>
 </mapper>

@@ -18,4 +18,6 @@ public interface BaseDao<T> {
 
     List<T> selectSelective(T record);
 
+    int insertBatch(List<T> records);
+
 }

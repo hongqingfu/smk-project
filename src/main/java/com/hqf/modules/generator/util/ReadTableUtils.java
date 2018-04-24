@@ -79,7 +79,7 @@ public class ReadTableUtils {
 			this.stmt = this.conn.createStatement(1005, 1007);
 
 			if("mysql".equals(dataSource.getDatabaseType())) {
-				this.sql = MessageFormat.format("select column_name,column_type,column_comment,numeric_precision,numeric_scale,character_maximum_length,is_nullable nullable from information_schema.columns where table_name = {0} and table_schema = {1}", new Object[] { "'"+tableName+"'", "'"+dataSource.getDatabaseName()+"'"});
+				this.sql = MessageFormat.format("select column_name,column_type,column_comment,numeric_precision,numeric_scale,character_maximum_length,is_nullable nullable,data_type,ordinal_position from information_schema.columns where table_name = {0} and table_schema = {1}", new Object[] { "'"+tableName+"'", "'"+dataSource.getDatabaseName()+"'"});
 			}
 //			else if("oracle".equals(dataSource.getDatabaseType())) {
 //				this.sql = MessageFormat.format(" select colstable.column_name column_name, colstable.data_type data_type, commentstable.comments column_comment, colstable.Data_Precision column_precision, colstable.Data_Scale column_scale,colstable.Char_Length,colstable.nullable from user_tab_cols colstable  inner join user_col_comments commentstable  on colstable.column_name = commentstable.column_name  where colstable.table_name = commentstable.table_name  and colstable.table_name = {0}", new Object[] { "'"+tableName+"'" });
@@ -101,12 +101,17 @@ public class ReadTableUtils {
 				String scale = FieldUtils.getNullString(this.rs.getString(5));
 				String charmaxLength = FieldUtils.getNullString(this.rs.getString(6));
 				String nullable = FieldUtils.getNullAble(this.rs.getString(7));
+				String dataType = this.rs.getString(8);
+				String sort = this.rs.getString(9);
 
 				GenTableColumn column = new GenTableColumn();
 				column.setName(name);
 				column.setJdbcType(type);
 				column.setComments(StringUtils.isEmpty(description) ? column.getName() : description);
 				column.setIsNull(nullable);
+				column.setJavaType(FieldUtils.formatDataType(dataType, precision, scale));
+				column.setJavaField(FieldUtils.formatField(name));
+				column.setSort(Long.valueOf(sort));
 
 				column.setIsPk("N");
 				column.setShowType("text");
@@ -147,4 +152,6 @@ public class ReadTableUtils {
 
 		return columnList;
 	}
+
+
 }

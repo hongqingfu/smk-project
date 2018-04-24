@@ -2,7 +2,9 @@ package com.hqf.modules.generator.model;
 
 import com.hqf.common.base.BaseEntity;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class GenTable extends BaseEntity {
 
@@ -20,6 +22,9 @@ public class GenTable extends BaseEntity {
 
     //关联父表外键
     private String parentTableFk;
+
+    //列
+    private List<GenTableColumn> columns = new ArrayList<>();
 
 
     public String getName() {
@@ -62,4 +67,11 @@ public class GenTable extends BaseEntity {
         this.parentTableFk = parentTableFk == null ? null : parentTableFk.trim();
     }
 
+    public List<GenTableColumn> getColumns() {
+        return columns;
+    }
+
+    public void setColumns(List<GenTableColumn> columns) {
+        this.columns = columns;
+    }
 }

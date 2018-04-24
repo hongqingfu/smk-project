@@ -13,7 +13,7 @@
                 data-bind="click:submit,style:{display:pkid?'display':'none'}"><span
                 class="glyphicon glyphicon-ok"></span>提交
         </button>
-        <button class="btn btn-primary" style="float:right;margin-right:5px" data-bind="click:Temporary" remove="approve"><span
+        <button class="btn btn-primary" style="float:right;margin-right:5px" data-bind="click:save" remove="approve"><span
                 class="glyphicon glyphicon-floppy-disk"></span>暂存
         </button>
     </div>
